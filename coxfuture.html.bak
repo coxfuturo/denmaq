@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Denmaq</title>
+    <title>CoxFuture Technologies</title>
     <meta name="description" content="Leading provider of scalable software and IT solutions for modern businesses">
 
     <!-- favicon -->
@@ -36,7 +36,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/app.css">
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://Denmaq.com/pages/team.html">
+    <link rel="canonical" href="https://coxfuture.com/pages/team.html">
 </head>
 
 <body class="home-page">
@@ -45,8 +45,8 @@
     <header>
         <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
             <div class="container-fluid px-3">
-                <a class="navbar-brand" href="Denmaq.html">
-                    <img src="img/logo.png" alt="Denmaq Logo" class="logo img-fluid">
+                <a class="navbar-brand" href="coxfuture.html">
+                    <img src="img/logo.png" alt="CoxFuture Logo" class="logo img-fluid">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon">
@@ -58,7 +58,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="./Denmaq.html">Home</a>
+                            <a class="nav-link" href="./coxfuture.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./pages/about.html">About</a>
@@ -251,37 +251,46 @@
 
         <div class="container">
             <div class="row align-items-center min-vh-100">
-                <div class="col-lg-7">
+                <div class="col-lg-6">
                     <div class="hero-content">
                         <h1 class="hero-title">
-                            <span class="title-main">Elevate Your Business With</span>
-                            <span class="title-gradient typing-text">Custom Solutions</span>
+                            <span class="title-main">Turning</span>
+                            <span class="title-gradient typing-text">Idea's</span>
+                            <span class="title-sub">Into Reality</span>
                         </h1>
-                        <p class="hero-description">Denmaq is a premium IT solutions agency dedicated to accelerating digital growth. From high-performance web and mobile apps to enterprise-grade software and result-driven SEO, we transform complex challenges into seamless digital experiences.</p>
+                        <p class="hero-description">Discover a space where innovation meets simplicity, crafted to
+                            elevate your everyday experience. Whether you're looking for inspiration, practical
+                            solutions, or insightful knowledge, you've come to the right place.</p>
 
                         <div class="hero-buttons">
                             <a href="#contact" class="btn btn-primary btn-lg">
-                                <span>Get a Free Consultation</span>
+                                <span>Start Your Project</span>
                                 <i class="fas fa-arrow-right"></i>
                             </a>
                             <a href="#services" class="btn btn-outline-primary btn-lg">
-                                <i class="fas fa-chart-line"></i>
-                                <span>View Our Services</span>
+                                <i class="fas fa-play-circle"></i>
+                                <span>Explore Services</span>
                             </a>
                         </div>
 
-                        <div class="hero-stats mt-5">
+                        <div class="hero-stats">
                             <div class="stat-item">
-                                <h3><span class="counter" data-target="10">0</span>+</h3>
-                                <p>Years Experience</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3><span class="counter" data-target="500">0</span>+</h3>
+                                <h3>
+                                    <span class="counter" data-target="50">0</span>+
+                                </h3>
                                 <p>Projects Delivered</p>
                             </div>
                             <div class="stat-item">
-                                <h3><span class="counter" data-target="98">0</span>%</h3>
-                                <p>Client Retention</p>
+                                <h3>
+                                    <span class="counter" data-target="40">0</span>+
+                                </h3>
+                                <p>Happy Clients</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>
+                                    <span class="counter" data-target="10">0</span>+
+                                </h3>
+                                <p>Expert Team</p>
                             </div>
                         </div>
                     </div>
@@ -298,27 +307,14 @@
         </div>
     </section>
 
-    <!-- Trusted By Section -->
-    <section class="trusted-by-section py-4 bg-light">
-        <div class="container">
-            <p class="text-center text-muted mb-4 fw-bold text-uppercase" style="letter-spacing: 1px; font-size: 0.9rem;">Trusted by Industry Leaders</p>
-            <div class="row align-items-center justify-content-center opacity-75 gap-4" style="filter: grayscale(100%);">
-                <div class="col-auto"><i class="fab fa-aws fa-3x"></i></div>
-                <div class="col-auto"><i class="fab fa-google fa-3x"></i></div>
-                <div class="col-auto"><i class="fab fa-microsoft fa-3x"></i></div>
-                <div class="col-auto"><i class="fab fa-apple fa-3x"></i></div>
-                <div class="col-auto"><i class="fab fa-react fa-3x"></i></div>
-            </div>
-        </div>
-    </section>
-
     <!-- Services Section -->
     <section class="services-section section-padding" id="services">
         <div class="container">
             <div class="section-header text-center scroll-reveal">
-                <span class="section-label">Our Core Services</span>
-                <h2 class="section-title">Scalable Solutions For Modern Businesses</h2>
-                <p class="section-description mx-auto">We engineer robust, secure, and intuitive digital solutions tailored to accelerate your business growth and maximize ROI.</p>
+                <span class="section-label">Our Services</span>
+                <h2 class="section-title">Comprehensive IT Solutions</h2>
+                <p class="section-description mx-auto">End-to-end technology
+                    services tailored to your business needs</p>
             </div>
 
             <div class="row g-4">
@@ -465,51 +461,54 @@
         </div>
     </section>
 
-    <!-- Process Section -->
+    <!-- planing and transform -->
     <section class="planing-section section-padding">
         <div class="container">
             <div class="section-header text-center scroll-reveal">
-                <span class="section-label">Our Methodology</span>
-                <h2 class="section-title">A Proven Process For Digital Success</h2>
+                <span class="section-label">Our Development Process</span>
+                <h2 class="section-title">From Idea to Impact</h2>
                 <div class="title-underline mx-auto"></div>
-                <p class="section-description mx-auto">We follow a transparent, strategic approach to ensure every project is delivered on time, within budget, and to the highest standards of quality.</p>
+                <p class="section-description mx-auto">A transparent,
+                    step-by-step process ensuring quality, efficiency, and
+                    successful delivery of your digital product.</p>
             </div>
             <div class="re-process-steps">
                 <div class="re-process-step">
                     <div class="re-circle"><i class="fas fa-search"></i></div>
-                    <h6>1. Discovery & Strategy</h6>
-                    <p>In-depth analysis of your goals, target audience, and market landscape.</p>
+                    <h6>Requirements</h6>
+                    <p>Define business model and goals</p>
                 </div>
                 <div class="re-process-step">
                     <div class="re-circle"><i class="fas fa-pencil-alt"></i></div>
-                    <h6>2. UI/UX Design</h6>
-                    <p>Creating intuitive, user-centric interfaces and wireframes.</p>
+                    <h6>Planning</h6>
+                    <p>Wireframes and product structure</p>
                 </div>
                 <div class="re-process-step">
                     <div class="re-circle"><i class="fas fa-code"></i></div>
-                    <h6>3. Agile Development</h6>
-                    <p>Writing clean, scalable code using modern technologies.</p>
+                    <h6>Development</h6>
+                    <p>Build app and backend system</p>
                 </div>
                 <div class="re-process-step">
                     <div class="re-circle"><i class="fas fa-link"></i></div>
-                    <h6>4. Testing & QA</h6>
-                    <p>Rigorous quality assurance to ensure bug-free performance.</p>
+                    <h6>Integration</h6>
+                    <p>Payments and APIs setup</p>
+                </div>
+                <div class="re-process-step">
+                    <div class="re-circle"><i class="fas fa-bug"></i></div>
+                    <h6>Testing</h6>
+                    <p>Quality and performance check</p>
                 </div>
                 <div class="re-process-step">
                     <div class="re-circle"><i class="fas fa-rocket"></i></div>
-                    <h6>5. Deployment</h6>
-                    <p>Seamless launch to production environments and app stores.</p>
-                </div>
-                <div class="re-process-step">
-                    <div class="re-circle"><i class="fas fa-chart-line"></i></div>
-                    <h6>6. Growth Marketing</h6>
-                    <p>SEO and digital strategies to drive traffic and user acquisition.</p>
+                    <h6>Launch</h6>
+                    <p>Deploy and go live</p>
                 </div>
                 <div class="re-process-step">
                     <div class="re-circle"><i class="fas fa-cog"></i></div>
-                    <h6>7. Support & Maintenance</h6>
-                    <p>Ongoing monitoring, updates, and performance optimization.</p>
+                    <h6>Support</h6>
+                    <p>Maintenance &amp; optimization</p>
                 </div>
+
             </div>
         </div>
     </section>
@@ -518,10 +517,12 @@
     <section class="solution-section section-padding" id="solutions">
         <div class="container">
             <div class="section-header text-center mb-5 scroll-reveal">
-                <span class="section-label">Industries We Serve</span>
-                <h2 class="section-title">Empowering Diverse Sectors Globally</h2>
+                <span class="section-label">Industry Solutions</span>
+                <h2 class="section-title">Tailored for Your Industry</h2>
                 <div class="title-underline mx-auto"></div>
-                <p class="section-description mx-auto">Leverage our deep domain expertise to solve complex challenges in your specific industry with custom-built technology solutions.</p>
+                <p class="section-description mx-auto">Specialized solutions
+                    for
+                    diverse business sectors</p>
             </div>
 
             <div class="row g-4">
@@ -605,7 +606,7 @@
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
+    <!-- About Section -->
     <section class="about-section section-padding" id="about">
         <div class="container">
             <div class="row">
@@ -613,13 +614,13 @@
                     <div class="about-image">
                         <div class="glass-card">
                             <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80"
-                                alt="Denmaq Expert Team Collaboration" class="img-fluid rounded" loading="lazy">
+                                alt="Team Collaboration" class="img-fluid rounded" loading="lazy">
                             <div class="about-badge">
                                 <div class="badge-icon">
                                     <i class="fas fa-award"></i>
                                 </div>
                                 <div class="badge-content">
-                                    <h3>10+</h3>
+                                    <h3>1+</h3>
                                     <p>Years of Excellence</p>
                                 </div>
                             </div>
@@ -629,11 +630,19 @@
                 <div class="col-lg-6">
                     <div class="about-content scroll-reveal mx-4">
                         <div class="section-header">
-                            <span class="section-label">Why Choose Denmaq?</span>
-                            <h2 class="section-title">Your Trusted Digital Transformation Partner</h2>
+                            <span class="section-label">About
+                                CoxFuture</span>
+                            <h2 class="section-title">Building Tomorrow's
+                                Technology Today</h2>
                             <div class="title-underline"></div>
                         </div>
-                        <p class="section-description">At Denmaq, we don't just build software; we engineer growth. Our holistic approach combines deep technical expertise with strategic business acumen to deliver solutions that give you a competitive edge. From startups to enterprises, we act as an extension of your team.</p>
+                        <p class="section-description">We are a team of
+                            passionate technologists, innovators, and
+                            problem-solvers dedicated to transforming
+                            businesses through cutting-edge software
+                            solutions. Our mission is to empower companies
+                            with scalable, secure, and intelligent
+                            technology that drives growth.</p>
 
                         <a href="#contact" class="btn btn-primary btn-lg">
                             <span>Partner With Us</span>
@@ -649,26 +658,29 @@
                         <i class="fas fa-bullseye"></i>
                     </div>
                     <div class="feature-content">
-                        <h4>Strategic Approach</h4>
-                        <p>We align technology with your core business objectives.</p>
+                        <h4>Our Mission</h4>
+                        <p>Deliver innovative solutions that
+                            exceed expectations</p>
                     </div>
                 </div>
                 <div class="feature-box">
                     <div class="feature-icon">
-                        <i class="fas fa-code-branch"></i>
+                        <i class="fas fa-eye"></i>
                     </div>
                     <div class="feature-content">
-                        <h4>Agile Delivery</h4>
-                        <p>Rapid deployment with iterative feedback loops.</p>
+                        <h4>Our Vision</h4>
+                        <p>Lead the digital transformation
+                            revolution globally</p>
                     </div>
                 </div>
                 <div class="feature-box">
                     <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
                     <div class="feature-content">
-                        <h4>24/7 Support</h4>
-                        <p>Dedicated maintenance and proactive monitoring.</p>
+                        <h4>Our Values</h4>
+                        <p>Innovation, integrity, and
+                            customer-centricity</p>
                     </div>
                 </div>
                 <div class="feature-box">
@@ -676,168 +688,9 @@
                         <i class="fas fa-users"></i>
                     </div>
                     <div class="feature-content">
-                        <h4>Expert Team</h4>
-                        <p>50+ certified developers, designers, and marketers.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technologies Section -->
-    <section class="technologies-section section-padding bg-light">
-        <div class="container">
-            <div class="section-header text-center scroll-reveal">
-                <span class="section-label">Our Tech Stack</span>
-                <h2 class="section-title">Harnessing Next-Gen Technologies</h2>
-                <div class="title-underline mx-auto"></div>
-                <p class="section-description mx-auto">We use modern, scalable, and secure technologies to build future-proof digital solutions.</p>
-            </div>
-            <div class="row text-center g-4 mt-4">
-                <div class="col-6 col-md-3 col-lg-2"><div class="p-4 bg-white shadow-sm rounded-3 hover-lift"><i class="fab fa-react fa-3x text-primary mb-3"></i><h6 class="mb-0">React</h6></div></div>
-                <div class="col-6 col-md-3 col-lg-2"><div class="p-4 bg-white shadow-sm rounded-3 hover-lift"><i class="fab fa-node-js fa-3x text-success mb-3"></i><h6 class="mb-0">Node.js</h6></div></div>
-                <div class="col-6 col-md-3 col-lg-2"><div class="p-4 bg-white shadow-sm rounded-3 hover-lift"><i class="fab fa-python fa-3x text-warning mb-3"></i><h6 class="mb-0">Python</h6></div></div>
-                <div class="col-6 col-md-3 col-lg-2"><div class="p-4 bg-white shadow-sm rounded-3 hover-lift"><i class="fab fa-aws fa-3x text-dark mb-3"></i><h6 class="mb-0">AWS</h6></div></div>
-                <div class="col-6 col-md-3 col-lg-2"><div class="p-4 bg-white shadow-sm rounded-3 hover-lift"><i class="fab fa-php fa-3x text-info mb-3"></i><h6 class="mb-0">PHP</h6></div></div>
-                <div class="col-6 col-md-3 col-lg-2"><div class="p-4 bg-white shadow-sm rounded-3 hover-lift"><i class="fab fa-angular fa-3x text-danger mb-3"></i><h6 class="mb-0">Angular</h6></div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio / Case Studies Section -->
-    <section class="portfolio-section section-padding">
-        <div class="container">
-            <div class="section-header text-center scroll-reveal">
-                <span class="section-label">Proven Results</span>
-                <h2 class="section-title">Our Success Stories</h2>
-                <div class="title-underline mx-auto"></div>
-                <p class="section-description mx-auto">Explore how we have helped businesses scale and dominate their markets with our innovative solutions.</p>
-            </div>
-            <div class="row g-4 mt-4">
-                <div class="col-lg-4">
-                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden hover-lift">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" class="card-img-top" alt="Fintech App Case Study" loading="lazy">
-                        <div class="card-body p-4">
-                            <span class="badge bg-primary mb-3 px-3 py-2 rounded-pill">Fintech</span>
-                            <h4 class="card-title h5 fw-bold">Secure Mobile Banking App</h4>
-                            <p class="card-text text-muted">Developed a highly secure iOS and Android banking app resulting in a 40% increase in mobile transactions.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden hover-lift">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" class="card-img-top" alt="E-Commerce SEO Case Study" loading="lazy">
-                        <div class="card-body p-4">
-                            <span class="badge bg-success mb-3 px-3 py-2 rounded-pill">SEO & Growth</span>
-                            <h4 class="card-title h5 fw-bold">E-Commerce Revenue Growth</h4>
-                            <p class="card-text text-muted">Implemented a comprehensive SEO strategy that increased organic traffic by 210% and doubled online revenue.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden hover-lift">
-                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80" class="card-img-top" alt="SaaS Development Case Study" loading="lazy">
-                        <div class="card-body p-4">
-                            <span class="badge bg-info mb-3 px-3 py-2 rounded-pill">SaaS Development</span>
-                            <h4 class="card-title h5 fw-bold">Enterprise CRM Platform</h4>
-                            <p class="card-text text-muted">Built a scalable SaaS CRM that automated workflows and saved the client over 1,000 manual hours monthly.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- FAQ Section -->
-    <section class="faq-section section-padding bg-light">
-        <div class="container">
-            <div class="section-header text-center scroll-reveal">
-                <span class="section-label">Have Questions?</span>
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <div class="title-underline mx-auto"></div>
-            </div>
-            <div class="row justify-content-center mt-4">
-                <div class="col-lg-8">
-                    <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item border-0 shadow-sm mb-3 rounded-4 overflow-hidden">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button fw-bold py-4 px-4 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    How long does it take to develop a custom application?
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted px-4 pb-4">
-                                    The timeline varies based on project complexity. A standard business website can take 3-6 weeks, while a complex custom mobile or web application may take 3-6 months. We provide a detailed timeline during the initial discovery phase.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 shadow-sm mb-3 rounded-4 overflow-hidden">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed fw-bold py-4 px-4 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Do you provide post-launch support and maintenance?
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted px-4 pb-4">
-                                    Yes, absolutely. We offer comprehensive maintenance and support packages to ensure your application remains secure, up-to-date, and optimized for peak performance long after the initial launch.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-0 shadow-sm mb-3 rounded-4 overflow-hidden">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed fw-bold py-4 px-4 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    How does your SEO strategy guarantee results?
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted px-4 pb-4">
-                                    While no one can guarantee specific rankings due to search engine algorithms, our data-driven approach focuses on proven white-hat SEO techniques. We optimize technical architecture, create high-value content, and build authoritative backlinks to consistently drive sustainable organic growth.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Preview Section -->
-    <section class="blog-section section-padding">
-        <div class="container">
-            <div class="section-header text-center scroll-reveal">
-                <span class="section-label">Latest Insights</span>
-                <h2 class="section-title">From Our Digital Experts</h2>
-                <div class="title-underline mx-auto"></div>
-            </div>
-            <div class="row g-4 mt-4">
-                <div class="col-lg-4">
-                    <div class="card h-100 shadow-sm border-0 rounded-4 hover-lift">
-                        <div class="card-body p-4">
-                            <small class="text-primary fw-bold text-uppercase tracking-wider">Technology</small>
-                            <h4 class="card-title h5 mt-3 fw-bold">The Future of AI in Mobile App Development</h4>
-                            <p class="card-text text-muted small mt-3">Discover how Artificial Intelligence is transforming user experiences and redefining the capabilities of modern mobile applications.</p>
-                            <a href="#" class="text-decoration-none fw-bold mt-3 d-inline-flex align-items-center gap-2">Read Article <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card h-100 shadow-sm border-0 rounded-4 hover-lift">
-                        <div class="card-body p-4">
-                            <small class="text-success fw-bold text-uppercase tracking-wider">SEO Strategies</small>
-                            <h4 class="card-title h5 mt-3 fw-bold">10 Local SEO Tips to Dominate Your Market</h4>
-                            <p class="card-text text-muted small mt-3">Learn actionable Google Business Profile optimization strategies to outrank competitors and attract high-intent local customers.</p>
-                            <a href="#" class="text-decoration-none fw-bold mt-3 d-inline-flex align-items-center gap-2 text-success">Read Article <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card h-100 shadow-sm border-0 rounded-4 hover-lift">
-                        <div class="card-body p-4">
-                            <small class="text-info fw-bold text-uppercase tracking-wider">Web Development</small>
-                            <h4 class="card-title h5 mt-3 fw-bold">React vs Angular: Which is Better in 2026?</h4>
-                            <p class="card-text text-muted small mt-3">An in-depth comparison of the top frontend frameworks to help you choose the right technology stack for your next enterprise project.</p>
-                            <a href="#" class="text-decoration-none fw-bold mt-3 d-inline-flex align-items-center gap-2 text-info">Read Article <i class="fas fa-arrow-right"></i></a>
-                        </div>
+                        <h4>Our Team</h4>
+                        <p>50+ certified experts across
+                            technologies</p>
                     </div>
                 </div>
             </div>
@@ -862,7 +715,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="testimonial-card-large scroll-reveal">
-                                    <p class="testimonial-text">"Denmaq
+                                    <p class="testimonial-text">"CoxFuture
                                         transformed our entire digital
                                         infrastructure. Their team's
                                         expertise in cloud migration saved
@@ -924,7 +777,7 @@
                             <div class="col-lg-8">
                                 <div class="testimonial-card-large scroll-reveal">
                                     <p class="testimonial-text">"Working
-                                        with Denmaq on our AI-powered
+                                        with CoxFuture on our AI-powered
                                         analytics
                                         platform was a game-changer. They
                                         delivered beyond expectations and
@@ -1010,7 +863,7 @@
                             </div>
                             <div class="info-content">
                                 <h4>Email Us</h4>
-                                <p>info@Denmaq.com</p>
+                                <p>info@coxfuture.com</p>
                             </div>
                         </div>
 
@@ -1026,15 +879,15 @@
                         </div>
 
                         <div class="social-links-large mt-4">
-                            <a href="https://x.com/Denmaq" class="social-link" target="_blank" rel="noopener noreferrer"
-    aria-label="Visit Denmaq on X"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href="https://www.linkedin.com/company/Denmaq-technologies-pvt-ltd"
+                            <a href="https://x.com/CoxFuture" class="social-link" target="_blank" rel="noopener noreferrer"
+    aria-label="Visit CoxFuture on X"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/coxfuture-technologies-pvt-ltd"
                                 class="social-link" target="_blank" rel="noopener noreferrer"
-    aria-label="Visit Denmaq on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                           <a href="https://www.instagram.com/Denmaq_technologies?igsh=Z3ZnZmljZmJ5bjRz" class="social-link" target="_blank" rel="noopener noreferrer"
-    aria-label="Visit Denmaq on Instagram"><i class="fab fa-instagram"></i></a>
+    aria-label="Visit CoxFuture on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                           <a href="https://www.instagram.com/coxfuture_technologies?igsh=Z3ZnZmljZmJ5bjRz" class="social-link" target="_blank" rel="noopener noreferrer"
+    aria-label="Visit CoxFuture on Instagram"><i class="fab fa-instagram"></i></a>
                             <a href="https://www.facebook.com/share/1DJM4oE11Y/" class="social-link" target="_blank" rel="noopener noreferrer"
-    aria-label="Visit Denmaq on Facebook"><i class="fab fa-facebook"></i></a>
+    aria-label="Visit CoxFuture on Facebook"><i class="fab fa-facebook"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1122,21 +975,21 @@
             <div class="row g-2">
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-widget">
-                        <a class="navbar-brand" href="Denmaq.html">
-                            <img src="img/logo.png" alt="Denmaq Logo" class="logo img-fluid">
+                        <a class="navbar-brand" href="coxfuture.html">
+                            <img src="img/logo.png" alt="CoxFuture Logo" class="logo img-fluid">
                         </a>
                         <p class="footer-description">Building tomorrow's
                             technology today. We empower businesses with
                             scalable, innovative software solutions.</p>
                         <div class="footer-social">
-                             <a href="https://x.com/Denmaq" class="social-link" target="_blank" rel="noopener noreferrer"
-    aria-label="Visit Denmaq on X"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href="https://www.linkedin.com/company/Denmaq-technologies-pvt-ltd" class="social-link" target="_blank" rel="noopener noreferrer"
-    aria-label="Visit Denmaq on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://www.instagram.com/Denmaq_technologies?igsh=Z3ZnZmljZmJ5bjRz" class="social-link" target="_blank" rel="noopener noreferrer"
-    aria-label="Visit Denmaq on Instagram"><i class="fab fa-instagram"></i></a>
+                             <a href="https://x.com/CoxFuture" class="social-link" target="_blank" rel="noopener noreferrer"
+    aria-label="Visit CoxFuture on X"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/coxfuture-technologies-pvt-ltd" class="social-link" target="_blank" rel="noopener noreferrer"
+    aria-label="Visit CoxFuture on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/coxfuture_technologies?igsh=Z3ZnZmljZmJ5bjRz" class="social-link" target="_blank" rel="noopener noreferrer"
+    aria-label="Visit CoxFuture on Instagram"><i class="fab fa-instagram"></i></a>
                             <a href="https://www.facebook.com/share/1DJM4oE11Y/" class="social-link" target="_blank" rel="noopener noreferrer"
-    aria-label="Visit Denmaq on Facebook"><i class="fab fa-facebook"></i></a>
+    aria-label="Visit CoxFuture on Facebook"><i class="fab fa-facebook"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1190,7 +1043,7 @@
                                 <div class="d-flex align-items-start gap-3">
                                     <i class="fas fa-map-marker-alt"></i>
                                     <span>
-                                        Denmaq,<br>
+                                        CoxFuture Technologies,<br>
                                         LG-05, H-202,<br>
                                         Dallas 1 Business Park,<br>
                                         Sector-63, Noida,<br>
@@ -1211,8 +1064,8 @@
                             <li>
                                 <div class="d-flex align-items-center gap-3">
                                     <i class="fas fa-envelope"></i>
-                                    <a href="mailto:info@Denmaq.com">
-                                        info@Denmaq.com
+                                    <a href="mailto:info@coxfuture.com">
+                                        info@coxfuture.com
                                     </a>
                                 </div>
                             </li>
@@ -1228,7 +1081,7 @@
             <div class="footer-bottom">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="copyright">© 2026 Denmaq. All rights
+                        <p class="copyright">© 2026 CoxFuture. All rights
                             reserved.</p>
                     </div>
                     <div class="col-md-6">
