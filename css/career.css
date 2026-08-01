@@ -1,0 +1,586 @@
+/* ==========================================================
+   CoxFuture — Career Page Stylesheet
+   ========================================================== */
+
+/* ==========================================
+   1. Hero Banner
+   ========================================== */
+.career-hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 180px 0 110px;
+    color: #ffffff;
+    background:
+        linear-gradient(180deg, rgba(20, 16, 31, 0.82) 0%, rgba(65, 30, 121, 0.88) 100%),
+        url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    overflow: hidden;
+}
+
+.career-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.career-hero-breadcrumb {
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 1.5rem;
+}
+
+.career-hero-breadcrumb a {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.career-hero-breadcrumb a:hover {
+    color: var(--primary-color);
+}
+
+.career-hero-breadcrumb span {
+    color: #ffffff;
+}
+
+.career-hero-badge {
+    animation: slideInDown 0.8s var(--ease-premium);
+}
+
+.career-hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    max-width: 800px;
+    color: #ffffff !important;
+    margin-top: 1.25rem;
+    animation: slideInUp 0.8s var(--ease-premium) 0.1s;
+    animation-fill-mode: both;
+}
+
+.career-hero-title span {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.career-hero-subtitle {
+    margin-top: 20px;
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.82);
+    max-width: 620px;
+    line-height: 1.7;
+    animation: slideInUp 0.8s var(--ease-premium) 0.25s;
+    animation-fill-mode: both;
+}
+
+.career-hero-cta {
+    margin-top: 2.25rem;
+    animation: slideInUp 0.8s var(--ease-premium) 0.4s;
+    animation-fill-mode: both;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ==========================================
+   4. Employee Benefits Grid
+   ========================================== */
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.benefit-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all var(--transition-normal);
+}
+
+.benefit-card:hover {
+    border-color: transparent;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-6px);
+    background: var(--gradient-primary);
+}
+
+.benefit-card:hover h4,
+.benefit-card:hover p,
+.benefit-card:hover i {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff;
+}
+
+.benefit-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    background: var(--bg-secondary);
+    margin: 0 auto 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    transition: var(--transition-normal);
+}
+
+.benefit-icon i {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: var(--transition-normal);
+}
+
+.benefit-card:hover .benefit-icon {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.benefit-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    transition: var(--transition-normal);
+}
+
+.benefit-card p {
+    font-size: 0.85rem;
+    margin: 0;
+    color: var(--text-secondary);
+    transition: var(--transition-normal);
+}
+
+/* ==========================================
+   5. Current Openings — Job Cards & Filters
+   ========================================== */
+.dept-filter {
+    margin-bottom: 3rem;
+}
+
+.job-card {
+    transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
+
+.job-card.hidden {
+    display: none;
+}
+
+.job-card-inner {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    height: 100%;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.job-card-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-normal);
+}
+
+.job-card-inner:hover::before {
+    transform: scaleX(1);
+}
+
+.job-card-inner:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+}
+
+.job-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.job-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.35rem;
+}
+
+.job-dept-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+.job-icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-md);
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.job-desc {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+}
+
+.job-meta {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+}
+
+.job-meta li {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.job-meta i {
+    color: var(--secondary-color);
+}
+
+.job-apply-btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.no-jobs-msg {
+    font-size: 1rem;
+}
+
+/* ==========================================
+   6. Hiring Process — Horizontal Timeline
+   ========================================== */
+.hiring-strip {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    justify-content: center;
+}
+
+.hiring-strip .process-stage {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.process-arrow {
+    align-self: center;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    opacity: 0.35;
+    flex-shrink: 0;
+    padding: 0 0.5rem;
+}
+
+@media (max-width: 991px) {
+    .hiring-strip {
+        flex-wrap: wrap;
+    }
+
+    .hiring-strip .process-stage {
+        flex: 1 1 calc(33.33% - 1.25rem);
+    }
+
+    .process-arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .hiring-strip .process-stage {
+        flex: 1 1 100%;
+    }
+}
+
+/* ==========================================
+   7. Life At CoxFuture — Gallery & Lightbox
+   ========================================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+}
+
+.gallery-item:nth-child(4n+1) {
+    grid-row: span 2;
+    aspect-ratio: 1 / 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(65, 30, 121, 0.85) 100%);
+    opacity: 0;
+    transition: var(--transition-normal);
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.12);
+}
+
+.gallery-zoom-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.6);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    opacity: 0;
+    transition: all var(--transition-normal);
+    z-index: 2;
+}
+
+.gallery-item:hover .gallery-zoom-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Lightbox */
+.gallery-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 8, 20, 0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.gallery-lightbox.show {
+    display: flex;
+    opacity: 1;
+}
+
+.gallery-lightbox-content {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+.gallery-lightbox-content img {
+    max-width: 100%;
+    max-height: 75vh;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-xl);
+}
+
+.gallery-lightbox-content p {
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 1.25rem;
+    font-size: 1rem;
+}
+
+.gallery-lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.gallery-lightbox-close:hover {
+    background: var(--gradient-primary);
+    transform: rotate(90deg);
+}
+
+.gallery-lightbox-nav {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    flex-shrink: 0;
+}
+
+.gallery-lightbox-nav:hover {
+    transform: scale(1.1);
+}
+
+.gallery-lightbox-prev {
+    margin-right: 1.5rem;
+}
+
+.gallery-lightbox-next {
+    margin-left: 1.5rem;
+}
+
+/* ==========================================
+   11. Career Application Form
+   ========================================== */
+.career-form-wrapper {
+    padding: 2rem;
+}
+
+.file-upload-group {
+    position: relative;
+}
+
+.file-upload-group .file-input {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.file-upload-group i {
+    top: calc(50% + 12px);
+}
+
+.file-name {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+.form-group.has-error input,
+.form-group.has-error select,
+.form-group.has-error textarea {
+    border-color: #ef4444 !important;
+}
+
+.form-error {
+    display: none;
+    position: static;
+    font-size: 0.78rem;
+    color: #ef4444;
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+.form-group.has-error .form-error {
+    display: block;
+}
+
+/* ==========================================
+   Responsive
+   ========================================== */
+@media (max-width: 991px) {
+    .career-hero {
+        min-height: auto;
+        padding: 150px 0 90px;
+    }
+
+    .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .career-hero {
+        padding: 130px 0 80px;
+    }
+
+    .career-hero-title {
+        font-size: 2.25rem;
+    }
+
+    .job-card-top {
+        flex-direction: row;
+    }
+
+    .job-meta {
+        gap: 0.85rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item:nth-child(4n+1) {
+        grid-row: span 1;
+        aspect-ratio: 1 / 1;
+    }
+
+    .career-form-wrapper {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .benefit-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .career-hero-cta {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,188 @@
+/* ==========================================
+   Portfolio / Projects Page
+   ========================================== */
+.portfolio-hero {
+    padding: 160px 0 80px;
+    background: var(--bg-dark);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.portfolio-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 60%, rgba(65, 30, 121, 0.55), transparent 65%);
+    pointer-events: none;
+}
+
+.portfolio-hero .eyebrow-pill {
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: var(--radius-pill);
+    border: 1px solid rgba(194, 191, 200, 0.35);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-hero h1 {
+    color: #fff;
+    font-size: clamp(2.4rem, 5vw, 3.5rem);
+    margin-bottom: 1.25rem;
+}
+
+.portfolio-hero h1 em {
+    font-style: normal;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.portfolio-hero p {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1.1rem;
+    max-width: 580px;
+    margin: 0 auto 2.5rem;
+}
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    font-family: var(--font-secondary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--gradient-primary);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: var(--shadow-md);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+}
+
+.portfolio-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: transparent;
+}
+
+.portfolio-card-img {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+    background: var(--bg-tertiary);
+}
+
+.portfolio-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.portfolio-card:hover .portfolio-card-img img {
+    transform: scale(1.07);
+}
+
+.portfolio-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(65, 30, 121, 0.85) 100%);
+    opacity: 0;
+    transition: var(--transition-normal);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.25rem;
+}
+
+.portfolio-card:hover .portfolio-card-overlay {
+    opacity: 1;
+}
+
+.overlay-link {
+    color: #fff;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.portfolio-card-body {
+    padding: 1.5rem;
+}
+
+.portfolio-cat {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    margin-bottom: 0.6rem;
+}
+
+.portfolio-card-body h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+}
+
+.portfolio-card-body p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tech-tag {
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.portfolio-card.hidden {
+    display: none;
+}

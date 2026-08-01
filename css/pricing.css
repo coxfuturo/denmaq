@@ -1,0 +1,590 @@
+/* ==========================================
+   Pricing Page
+   ========================================== */
+
+.pricing-page .section-padding {
+    padding: 100px 0;
+}
+
+.pricing-page .section-header {
+    max-width: 700px;
+}
+
+.pricing-page .section-header.text-center {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================
+   Hero
+   ========================================== */
+.pricing-hero {
+    position: relative;
+    padding: 165px 0 110px;
+    background: var(--bg-secondary);
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.pricing-hero::before {
+    content: '';
+    position: absolute;
+    top: -180px;
+    right: -160px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    opacity: 0.10;
+    filter: blur(10px);
+}
+
+.pricing-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -220px;
+    left: -140px;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    opacity: 0.08;
+    filter: blur(10px);
+}
+
+.pricing-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.pricing-hero-title {
+    font-size: 3.25rem;
+    font-weight: 800;
+    letter-spacing: var(--tracking-tight);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.pricing-hero-title .accent-text {
+    background: var(--gradient-premium);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pricing-hero-description {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin-bottom: 2.25rem;
+}
+
+.pricing-hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* --- Hero visual --- */
+.pricing-hero-visual {
+    position: relative;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing-visual-core {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    animation: float 6s ease-in-out infinite;
+}
+
+.pricing-float {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 16px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--glass-shadow);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    animation: float 5s ease-in-out infinite;
+    z-index: 3;
+}
+
+.pricing-float i {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+.pricing-float small {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.pricing-float-1 {
+    top: 2%;
+    left: -8%;
+    animation-delay: 0s;
+}
+
+.pricing-float-2 {
+    top: 18%;
+    right: -10%;
+    animation-delay: 0.5s;
+}
+
+.pricing-float-3 {
+    top: 46%;
+    left: -12%;
+    animation-delay: 1s;
+}
+
+.pricing-float-4 {
+    bottom: 28%;
+    right: -8%;
+    animation-delay: 1.5s;
+}
+
+.pricing-float-5 {
+    bottom: 8%;
+    left: -6%;
+    animation-delay: 2s;
+}
+
+.pricing-float-6 {
+    bottom: -2%;
+    right: 14%;
+    animation-delay: 2.5s;
+}
+
+/* ==========================================
+   Pricing intro
+   ========================================== */
+.pricing-intro {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   Main pricing cards
+   ========================================== */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    margin-top: 3rem;
+}
+
+.pricing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem 2rem;
+    height: 100%;
+    transition: var(--transition-normal);
+    overflow: hidden;
+}
+
+.pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-normal);
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+}
+
+.pricing-card:hover::before {
+    transform: scaleX(1);
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--primary-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.pricing-card.featured::before {
+    transform: scaleX(1);
+}
+
+.pricing-featured-badge {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    padding: 5px 14px;
+    border-radius: var(--radius-pill);
+    background: var(--gradient-primary);
+    color: #fff;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+}
+
+.pricing-card-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    background: var(--bg-tertiary);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    transition: var(--transition-normal);
+}
+
+.pricing-card:hover .pricing-card-icon {
+    background: var(--gradient-primary);
+    color: #fff;
+}
+
+.pricing-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.6rem;
+}
+
+.pricing-card p.pricing-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.pricing-price-block {
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+}
+
+.pricing-price-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.pricing-amount {
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: var(--font-secondary);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pricing-secondary-tier {
+    margin-top: 0.6rem;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+}
+
+.pricing-secondary-tier strong {
+    color: var(--text-primary);
+}
+
+.pricing-card .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+/* ==========================================
+   Why our pricing
+   ========================================== */
+.pricing-why-section {
+    background: var(--bg-secondary);
+}
+
+.pricing-value-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    height: 100%;
+    text-align: center;
+    transition: var(--transition-normal);
+}
+
+.pricing-value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.pricing-value-card .value-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    font-size: 1.6rem;
+    color: #fff;
+    margin: 0 auto 1.1rem;
+}
+
+.pricing-value-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.pricing-value-card p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ==========================================
+   What's included
+   ========================================== */
+.pricing-included-panel {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 3rem;
+}
+
+.pricing-included-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem 2.5rem;
+    margin-top: 1.5rem;
+}
+
+.pricing-included-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.pricing-included-item i {
+    color: var(--accent-color);
+    font-size: 1.05rem;
+    flex-shrink: 0;
+}
+
+.pricing-included-item span {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* ==========================================
+   Process timeline (uses .re-process-steps / .re-circle)
+   ========================================== */
+.pricing-process-section .re-process-steps {
+    margin-top: 3rem;
+}
+
+.pricing-process-section .re-process-step {
+    min-width: 120px;
+}
+
+/* ==========================================
+   Why invest (split layout)
+   ========================================== */
+.pricing-invest-section {
+    background: var(--bg-primary);
+}
+
+.pricing-invest-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+}
+
+.pricing-invest-checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.9375rem;
+}
+
+.pricing-invest-checklist i {
+    color: var(--accent-color);
+    margin-top: 4px;
+}
+
+/* ==========================================
+   FAQ (uses .re-faq accordion component)
+   ========================================== */
+.pricing-faq-section {
+    background: var(--bg-secondary);
+}
+
+/* ==========================================
+   Final CTA
+   ========================================== */
+.pricing-final-cta {
+    position: relative;
+    background: var(--gradient-premium);
+    border-radius: var(--radius-xl);
+    padding: 4.5rem 3rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.pricing-final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.12), transparent 55%);
+}
+
+.pricing-final-cta h2 {
+    position: relative;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: none;
+    -webkit-text-fill-color: #fff;
+}
+
+.pricing-final-cta p {
+    position: relative;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 560px;
+    margin: 0 auto 2rem;
+    font-size: 1.05rem;
+}
+
+.pricing-final-cta .cta-buttons {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pricing-final-cta .btn-primary {
+    background: #fff;
+    color: var(--secondary-color);
+}
+
+.pricing-final-cta .btn-primary:hover {
+    background: var(--bg-secondary);
+    color: var(--secondary-color);
+}
+
+.pricing-final-cta .btn-outline-primary {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.pricing-final-cta .btn-outline-primary:hover {
+    background: #fff;
+    border-color: #fff;
+    color: var(--secondary-color);
+}
+
+/* ==========================================
+   Responsive
+   ========================================== */
+@media (max-width: 1199px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .pricing-hero-title {
+        font-size: 2.4rem;
+    }
+
+    .pricing-hero-visual {
+        height: 340px;
+        margin-top: 3rem;
+    }
+
+    .pricing-included-panel {
+        padding: 2rem;
+    }
+
+    .pricing-included-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .pricing-hero {
+        padding: 130px 0 70px;
+        text-align: center;
+    }
+
+    .pricing-hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pricing-hero-buttons {
+        justify-content: center;
+    }
+
+    .pricing-hero-visual {
+        height: 280px;
+    }
+
+    .pricing-float {
+        display: none;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-final-cta {
+        padding: 3rem 1.5rem;
+    }
+
+    .pricing-final-cta h2 {
+        font-size: 1.85rem;
+    }
+}

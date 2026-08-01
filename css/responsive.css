@@ -1,0 +1,243 @@
+/* Responsive Design Media Queries */
+
+/* ==========================================
+   Responsive Design
+   ========================================== */
+@media (max-width: 991px) {
+    :root {
+        --section-padding: 80px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2.25rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .title-sub {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .carousel-control-prev {
+        left: -20px;
+    }
+
+    .carousel-control-next {
+        right: -20px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .about-cta-premium {
+        padding: 60px 20px;
+    }
+
+    .about-cta-premium h2 {
+        font-size: 32px;
+    }
+
+    .about-cta-premium p {
+        font-size: 16px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --section-padding: 60px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-title {
+        font-size: 1.875rem;
+    }
+
+    .hero-title {
+        font-size: 2.25rem;
+    }
+
+    .title-sub {
+        font-size: 1.5rem;
+    }
+
+    .hero-stats {
+        gap: 2rem;
+    }
+
+    .hero-stats .stat-item h3 {
+        font-size: 2rem;
+    }
+
+    .navbar-collapse {
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        padding: 1rem;
+        border-radius: var(--radius-sm);
+        margin-top: 1rem;
+    }
+
+    .nav-cta {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-bottom-links {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+
+    .testimonial-card-large {
+        padding: 2rem;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
+    }
+
+    .cta-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-buttons {
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-cta-premium {
+        padding: 50px 15px;
+        border-radius: var(--radius-lg);
+    }
+
+    .about-cta-premium h2 {
+        font-size: 26px;
+    }
+
+    .about-btn-premium {
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        height: 35px;
+    }
+}
+
+
+
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: var(--bg-primary);
+                padding: 16px;
+                margin-top: 10px;
+                border-radius: var(--radius-sm);
+                border: 1px solid var(--border-color);
+                box-shadow: var(--shadow-lg);
+                max-height: calc(100vh - 100px);
+                overflow-y: auto;
+            }
+
+            .dropdown-menu.mega-menu {
+                position: static !important;
+                min-width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            .footer-col:first-child {
+                grid-column: 1 / -1;
+            }
+
+            .process-step {
+                flex: 0 0 calc(33.33% - 20px);
+            }
+        }
+
+        @media (max-width: 767px) {
+            section {
+                padding-top: 40px !important;
+                padding-bottom: 40px !important;
+            }
+
+            .astro-hero {
+                min-height: auto;
+                padding: 50px 0;
+            }
+
+            .astro-hero::before {
+                background: rgba(0, 0, 0, 0.80);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .footer-col:first-child {
+                grid-column: auto;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .process-step {
+                flex: 0 0 calc(50% - 10px);
+            }
+        }
+        

@@ -1,0 +1,853 @@
+/* ==========================================
+   Website Development Service Page
+   Page-specific styles only.
+   Built entirely on existing tokens from variables.css
+   (colors, radius, shadow, transitions, fonts).
+   Does not redefine or override any existing selectors.
+   ========================================== */
+
+.wd-page .section-padding {
+    padding: 100px 0;
+}
+
+.wd-page .section-header {
+    max-width: 700px;
+}
+
+.wd-page .section-header.text-center {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================
+   Hero
+   ========================================== */
+.wd-hero {
+    position: relative;
+    padding: 165px 0 110px;
+    background: var(--bg-secondary);
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.wd-hero::before {
+    content: '';
+    position: absolute;
+    top: -180px;
+    right: -160px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    opacity: 0.10;
+    filter: blur(10px);
+}
+
+.wd-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -220px;
+    left: -140px;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    opacity: 0.08;
+    filter: blur(10px);
+}
+
+.wd-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.wd-hero-title {
+    font-size: 3.35rem;
+    font-weight: 800;
+    letter-spacing: var(--tracking-tight);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.wd-hero-title .accent-text {
+    background: var(--gradient-premium);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.wd-hero-description {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin-bottom: 1.75rem;
+}
+
+.wd-hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    margin-bottom: 2.25rem;
+}
+
+.wd-hero-features span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.wd-hero-features i {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+.wd-hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* --- Hero visual --- */
+.wd-hero-visual {
+    position: relative;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wd-visual-core {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    animation: float 6s ease-in-out infinite;
+}
+
+.wd-float {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 16px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--glass-shadow);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    animation: float 5s ease-in-out infinite;
+    z-index: 3;
+}
+
+.wd-float i {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+.wd-float-1 {
+    top: 2%;
+    left: -6%;
+    animation-delay: 0s;
+}
+
+.wd-float-2 {
+    top: 16%;
+    right: -10%;
+    animation-delay: 0.5s;
+}
+
+.wd-float-3 {
+    top: 42%;
+    left: -12%;
+    animation-delay: 1s;
+}
+
+.wd-float-4 {
+    bottom: 26%;
+    right: -8%;
+    animation-delay: 1.5s;
+}
+
+.wd-float-5 {
+    bottom: 6%;
+    left: -4%;
+    animation-delay: 2s;
+}
+
+.wd-float-6 {
+    bottom: -2%;
+    right: 12%;
+    animation-delay: 2.5s;
+}
+
+.wd-float-score {
+    top: 50%;
+    left: 38%;
+    transform: translateY(-50%);
+    flex-direction: column;
+    text-align: center;
+    padding: 14px 20px;
+    animation-delay: 3s;
+}
+
+.wd-float-score .score-ring {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: conic-gradient(var(--accent-color) 0 96%, var(--bg-tertiary) 96% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+}
+
+.wd-float-score .score-ring span {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.wd-float small {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   Logo / trust strip (mirrors seo.css marquee, page-scoped)
+   ========================================== */
+.wd-logos-section {
+    padding: 56px 0;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.wd-logos-label {
+    text-align: center;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wider);
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.wd-logo-marquee {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.wd-logo-track {
+    display: flex;
+    width: max-content;
+    gap: 4.5rem;
+    align-items: center;
+    animation: wdMarquee 28s linear infinite;
+}
+
+.wd-logo-marquee:hover .wd-logo-track {
+    animation-play-state: paused;
+}
+
+.wd-logo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    opacity: 0.75;
+    transition: var(--transition-normal);
+}
+
+.wd-logo-item:hover {
+    opacity: 1;
+    color: var(--secondary-color);
+}
+
+.wd-logo-item i {
+    font-size: 1.5rem;
+}
+
+@keyframes wdMarquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ==========================================
+   Why Choose CoxFuture (uses .service-card)
+   ========================================== */
+.wd-why-section {
+    background: var(--bg-secondary);
+}
+
+/* ==========================================
+   Process timeline (uses .re-process-steps / .re-circle)
+   ========================================== */
+.wd-process-section .re-process-steps {
+    margin-top: 3rem;
+}
+
+.wd-process-section .re-process-step {
+    min-width: 130px;
+}
+
+/* ==========================================
+   Services grid
+   ========================================== */
+.wd-service-pill {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    height: 100%;
+    transition: var(--transition-normal);
+}
+
+.wd-service-pill:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.wd-service-pill .pill-icon {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    background: var(--bg-tertiary);
+    color: var(--secondary-color);
+    font-size: 1.15rem;
+    transition: var(--transition-normal);
+}
+
+.wd-service-pill:hover .pill-icon {
+    background: var(--gradient-primary);
+    color: #fff;
+}
+
+.wd-service-pill h5 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+    color: var(--text-primary);
+}
+
+.wd-service-pill p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   Technology stack grid
+   ========================================== */
+.wd-tech-section {
+    background: var(--bg-secondary);
+}
+
+.wd-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.1rem;
+    margin-top: 3rem;
+}
+
+.wd-tech-item {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 0.85rem;
+    text-align: center;
+    transition: var(--transition-normal);
+}
+
+.wd-tech-item:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
+}
+
+.wd-tech-item i {
+    font-size: 1.75rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.wd-tech-item span {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* ==========================================
+   Alternating features section
+   ========================================== */
+.wd-feature-row {
+    margin-bottom: 5rem;
+}
+
+.wd-feature-row:last-child {
+    margin-bottom: 0;
+}
+
+.wd-feature-row .glass-card {
+    max-width: 460px;
+}
+
+.wd-feature-row.reverse .row {
+    flex-direction: row-reverse;
+}
+
+.wd-feature-pair {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.wd-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.wd-feature-item .pill-icon {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    background: var(--bg-tertiary);
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+.wd-feature-item h5 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+}
+
+.wd-feature-item p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   Industries
+   ========================================== */
+.wd-industry-card {
+    position: relative;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2rem 1.1rem;
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+    transition: var(--transition-normal);
+}
+
+.wd-industry-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: var(--transition-normal);
+    z-index: 0;
+}
+
+.wd-industry-card:hover::before {
+    opacity: 1;
+}
+
+.wd-industry-card i,
+.wd-industry-card span {
+    position: relative;
+    z-index: 1;
+    transition: var(--transition-normal);
+}
+
+.wd-industry-card i {
+    font-size: 1.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.wd-industry-card span {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.wd-industry-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.wd-industry-card:hover i,
+.wd-industry-card:hover span {
+    color: #fff;
+}
+
+/* ==========================================
+   Expertise / stats
+   ========================================== */
+.wd-expertise-section {
+    background: var(--gradient-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.wd-expertise-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.12), transparent 55%);
+}
+
+.wd-expertise-section .section-label,
+.wd-expertise-section .section-title,
+.wd-expertise-section .section-description {
+    color: #fff;
+    position: relative;
+}
+
+.wd-expertise-section .section-label::before {
+    background: #fff;
+}
+
+.wd-expertise-section .section-title {
+    background: none;
+    -webkit-text-fill-color: #fff;
+}
+
+.wd-expertise-section .section-description {
+    opacity: 0.85;
+}
+
+.wd-stat-block {
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+}
+
+.wd-stat-block .stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: var(--font-secondary);
+    color: #fff;
+    margin-bottom: 0.35rem;
+}
+
+.wd-stat-block p {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* ==========================================
+   Case studies
+   ========================================== */
+.wd-case-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    height: 100%;
+    transition: var(--transition-normal);
+}
+
+.wd-case-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+}
+
+.wd-case-tag {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: var(--radius-pill);
+    background: var(--bg-tertiary);
+    color: var(--secondary-color);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    margin-bottom: 1rem;
+}
+
+.wd-case-card h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.wd-case-row {
+    margin-bottom: 0.85rem;
+}
+
+.wd-case-row span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.wd-case-row p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.wd-case-results {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    flex-wrap: wrap;
+}
+
+.wd-case-results .result-metric {
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: var(--font-secondary);
+    color: var(--accent-color);
+}
+
+.wd-case-results .result-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    display: block;
+}
+
+/* ==========================================
+   Why modern websites matter
+   ========================================== */
+.wd-matters-section {
+    background: var(--bg-primary);
+}
+
+.wd-matters-visual {
+    position: relative;
+}
+
+.wd-matters-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1.5rem;
+}
+
+.wd-matters-checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.9375rem;
+}
+
+.wd-matters-checklist i {
+    color: var(--accent-color);
+    margin-top: 4px;
+}
+
+/* ==========================================
+   FAQ (uses .re-faq accordion component)
+   ========================================== */
+.wd-faq-section {
+    background: var(--bg-secondary);
+}
+
+/* ==========================================
+   Final CTA
+   ========================================== */
+.wd-final-cta {
+    position: relative;
+    background: var(--gradient-premium);
+    border-radius: var(--radius-xl);
+    padding: 4.5rem 3rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.wd-final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.12), transparent 55%);
+}
+
+.wd-final-cta h2 {
+    position: relative;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: none;
+    -webkit-text-fill-color: #fff;
+}
+
+.wd-final-cta p {
+    position: relative;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 560px;
+    margin: 0 auto 2rem;
+    font-size: 1.05rem;
+}
+
+.wd-final-cta .cta-buttons {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.wd-final-cta .btn-primary {
+    background: #fff;
+    color: var(--secondary-color);
+}
+
+.wd-final-cta .btn-primary:hover {
+    background: var(--bg-secondary);
+    color: var(--secondary-color);
+}
+
+.wd-final-cta .btn-outline-primary {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.wd-final-cta .btn-outline-primary:hover {
+    background: #fff;
+    border-color: #fff;
+    color: var(--secondary-color);
+}
+
+/* ==========================================
+   Responsive
+   ========================================== */
+@media (max-width: 991px) {
+    .wd-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .wd-hero-visual {
+        height: 340px;
+        margin-top: 3rem;
+    }
+
+    .wd-feature-row .row {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .wd-feature-row.reverse .row {
+        flex-direction: column-reverse;
+    }
+
+    .wd-matters-checklist {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .wd-hero {
+        padding: 130px 0 70px;
+        text-align: center;
+    }
+
+    .wd-hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .wd-hero-features,
+    .wd-hero-buttons {
+        justify-content: center;
+    }
+
+    .wd-hero-visual {
+        height: 280px;
+    }
+
+    .wd-float {
+        display: none;
+    }
+
+    .wd-float-score {
+        display: flex;
+        position: static;
+        transform: none;
+        margin: 1rem auto 0;
+        width: fit-content;
+    }
+
+    .wd-stat-block .stat-number {
+        font-size: 2.25rem;
+    }
+
+    .wd-final-cta {
+        padding: 3rem 1.5rem;
+    }
+
+    .wd-final-cta h2 {
+        font-size: 1.85rem;
+    }
+}

@@ -1,0 +1,16 @@
+/* ==========================================
+   CoxFuture - Modern IT Solutions Modular Stylesheet
+   ========================================== */
+
+@import "variables.css";
+@import "global.css";
+@import "navbar.css";
+@import "hero.css";
+@import "about.css";
+@import "project.css";
+@import "services.css";
+@import "seo.css";
+@import "career.css";
+@import "industries.css";
+@import "footer.css";
+@import "responsive.css";
