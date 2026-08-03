@@ -1,0 +1,38 @@
+﻿const fs = require("fs");
+const p = "d:/CoxfutureWork/denmaq/services/services.html";
+
+const nav = `
+    <!-- Navigation -->
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container-fluid px-3">
+          <a class="navbar-brand" href="../coxfuture.html"><img src="../img/logo.png" alt="Denmaq Logo" class="logo img-fluid"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span></button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="../coxfuture.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="../pages/about.html">About</a></li>
+              <li class="nav-item mega-dropdown">
+                <a class="nav-link" href="../services/services.html" role="button" aria-expanded="false">Services <i class="fas fa-chevron-down ms-1"></i></a>
+                <div class="mega-menu"><div class="mega-menu-inner">
+                  <div class="mega-intro"><h4>Our Services</h4><p>Empowering businesses with innovative digital solutions, scalable technology, and growth-focused strategies for global and domestic markets.</p></div>
+                  <div class="mega-links">
+                    <div class="service-column"><h4><i class="fas fa-globe-americas"></i><a href="../services/pricing.html">International Services</a></h4><a class="mega-link" href="../services/seo.html"><i class="fas fa-chart-line"></i><span>Search Engine Optimization</span></a><a class="mega-link" href="../services/webDevelopment.html"><i class="fas fa-globe"></i><span>Website Development</span></a><a class="mega-link" href="../services/androidDevelopment.html"><i class="fab fa-android"></i><span>Android App Development</span></a><a class="mega-link" href="../services/iosDevelopment.html"><i class="fab fa-apple"></i><span>iOS App Development</span></a><a class="mega-link" href="../services/mobileDevelopment.html"><i class="fas fa-mobile-screen-button"></i><span>Cross Platform Apps</span></a><a class="mega-link" href="../services/growthHacking.html"><i class="fas fa-rocket"></i><span>Growth Hacking</span></a></div>
+                    <div class="service-column"><h4><i class="fas fa-map-marker-alt"></i> Domestic Services</h4><a class="mega-link" href="../services/domestic/seo.html"><i class="fas fa-chart-line"></i><span>Search Engine Optimization</span></a><a class="mega-link" href="../services/domestic/gmb.html"><i class="fas fa-map-location-dot"></i><span>Google Business Profile (GMB)</span></a><a class="mega-link" href="../services/domestic/webDevelopment.html"><i class="fas fa-globe"></i><span>Website Development</span></a><a class="mega-link" href="../services/domestic/mobileApp.html"><i class="fas fa-mobile-screen-button"></i><span>Mobile App Development</span></a><a class="mega-link" href="../services/domestic/software.html"><i class="fas fa-laptop-code"></i><span>Custom Software Development</span></a><a class="mega-link" href="../services/domestic/saas.html"><i class="fas fa-cloud"></i><span>SaaS Development</span></a></div>
+                  </div>
+                </div></div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="../pages/projects.html">Portfolio</a></li>
+              <li class="nav-item industries-menu"><a class="nav-link" href="#">Industries <i class="fas fa-chevron-down ms-1"></i></a>
+                <div class="industries-dropdown"><div class="industries-card"><h2>Industries We Transform</h2><p>Custom software and digital solutions built for modern businesses.</p></div><div class="industry-column"><h4>Business</h4><a href="../industries/eCommerce.html"><i class="fas fa-cart-shopping"></i> E-Commerce</a><a href="../industries/foodApp.html"><i class="fas fa-utensils"></i> Food</a></div><div class="industry-column"><h4>Education &amp; Health</h4><a href="../industries/healthCare.html"><i class="fas fa-heart-pulse"></i> Health Care</a><a href="../industries/E-Learning.html"><i class="fas fa-graduation-cap"></i> E-Learning</a><a href="../industries/politics.html"><i class="fas fa-landmark"></i> Politics</a><a href="../industries/Astrology.html"><i class="fas fa-moon"></i> Astrology</a></div><div class="industry-column"><h4>Property</h4><a href="../industries/real_estate.html"><i class="fas fa-building"></i> Real Estate</a></div><div class="industry-column"><h4>Travel</h4><a href="../industries/travel.html"><i class="fas fa-plane"></i> Travel</a></div></div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+            </ul>
+            <div class="theme-changer"><button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme"><i class="fas fa-moon moon-icon"></i><i class="fas fa-sun sun-icon"></i></button><a class="btn btn-primary nav-cta" href="../pages/contact.html">Get Started</a></div>
+          </div>
+        </div>
+      </nav>
+    </header>`;
+
+fs.writeFileSync("d:/CoxfutureWork/denmaq/tmp_nav.txt", nav, "utf8");
+console.log("nav written");
