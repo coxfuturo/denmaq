@@ -179,15 +179,6 @@
     }
 }
 
-.industries-menu::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 100%;
-    height: 15px;
-}
-
 .industries-dropdown {
     position: absolute;
     top: 100%;
@@ -205,15 +196,17 @@
     box-shadow: var(--shadow-xl);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
     z-index: 99999;
 }
 
 @media (min-width: 992px) {
-    .industries-menu:hover .industries-dropdown,
-    .industries-dropdown:hover {
+    .industries-menu.is-open .industries-dropdown,
+    .industries-dropdown.is-open {
         opacity: 1;
         visibility: visible;
+        pointer-events: all;
         transform: translateX(-50%) translateY(0);
         transition-delay: 0s;
     }
@@ -365,16 +358,6 @@
     position: relative;
 }
 
-.mega-dropdown::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 100%;
-    height: 25px;
-    z-index: 99998;
-}
-
 @media (min-width: 992px) {
     .mega-dropdown {
         position: static !important;
@@ -390,7 +373,7 @@
     visibility: hidden;
     pointer-events: none;
     transform: translateX(-50%) translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
     width: 98vw;
     max-width: 1440px;
     background: var(--bg-primary);
@@ -402,19 +385,9 @@
     z-index: 99999;
 }
 
-.mega-menu::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -20px;
-    width: 100%;
-    height: 20px;
-}
-
 @media (min-width: 992px) {
-    .mega-dropdown:hover .mega-menu,
-    .mega-dropdown:focus-within .mega-menu,
-    .mega-menu:hover {
+    .mega-dropdown.is-open .mega-menu,
+    .mega-menu.is-open {
         opacity: 1;
         visibility: visible;
         pointer-events: all;
@@ -549,6 +522,11 @@
         padding: 0 !important;
     }
 
+    .mega-dropdown.open .mega-menu {
+        max-height: 2500px;
+        padding: 10px 0 !important;
+    }
+
     .mega-menu-inner {
         grid-template-columns: 1fr;
     }
@@ -571,4 +549,11 @@
     .mega-link:hover {
         transform: none;
     }
+}
+
+.mega-link.active {
+    background: var(--bg-secondary);
+    color: var(--secondary-color);
+    font-weight: 700;
+    border-left: 3px solid var(--secondary-color);
 }
