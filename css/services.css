@@ -354,6 +354,26 @@
     font-size: 0.85rem;
     margin-bottom: 0;
 }
+.section-label{
+    margin-top: 40px;
+}
+.price{
+    font-size:42px;
+    font-weight:700;
+    color:var(--secondary-color);
+    margin:25px 0 25px;
+}
+.price span{
+    display:block;
+    font-size:15px;
+    font-weight:500;
+    color:var(--text-secondary);
+}
+
+.service-card.featured .price,
+.service-card.featured .price span{
+    color:#fff;
+}
 
 /* ==========================================
 
