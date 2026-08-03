@@ -3,18 +3,23 @@
 ==============================*/
 .blog-row{
     margin-top:90px;
+    margin-left:0;
+    margin-right:0;
 }
 
+/* Blog Section Container */
+/* .blog-section .container,
 .solution-section .container{
-    padding-left:40px;
-    padding-right:40px;
-}
+    max-width: 1400px;
+    padding-left: 40px;
+    padding-right: 40px;
+} */
 
 /* Bootstrap columns ke andar spacing */
 .blog-row > div{
-    padding-left:18px;
-    padding-right:18px;
-    margin-bottom:20px;
+    padding-left:10px;
+    padding-right:10px;
+    margin-bottom:35px;
 }
 
 /* Card */

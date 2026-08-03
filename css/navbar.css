@@ -76,11 +76,13 @@
     gap: 10px;
     color: var(--text-primary);
 }
-
 .logo {
     height: 45px;
     width: auto;
     transition: all var(--transition-normal);
+}
+.logo img-fluid{
+    height: 88px;
 }
 
 [data-theme="dark"] .logo {
