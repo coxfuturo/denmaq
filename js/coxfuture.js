@@ -1234,7 +1234,145 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+// ==========================================
+// Precise Mega Dropdown Controller (Services & Industries)
+// ==========================================
+document.addEventListener("DOMContentLoaded", function () {
+    // 1. Dynamic Active Navbar Link Highlighting
+    const currentPath = window.location.pathname.split('/').pop() || 'coxfuture.html';
+    const isServiceDirectory = window.location.pathname.includes('/services/');
 
+    document.querySelectorAll('#mainNav .nav-link').forEach(link => {
+        const href = link.getAttribute('href') || '';
+        const linkPath = href.split('/').pop();
+        if (linkPath && linkPath === currentPath) {
+            link.classList.add('active');
+        } else if (isServiceDirectory && (linkPath === 'services.html' || href.includes('services/'))) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+
+    document.querySelectorAll('.mega-link').forEach(link => {
+        const href = link.getAttribute('href') || '';
+        const linkPath = href.split('/').pop();
+        if (linkPath && linkPath === currentPath) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+
+    // 2. Precise Hover Controller with 200ms Exit Delay for Services & Industries
+    function setupMegaDropdown(triggerSelector, dropdownSelector) {
+        const trigger = document.querySelector(triggerSelector);
+        const dropdown = document.querySelector(dropdownSelector);
+        if (!trigger || !dropdown) return;
+
+        const navLink = trigger.querySelector('a.nav-link');
+        let closeTimer = null;
+
+        function openMenu() {
+            // Close any other open dropdown first (ensure only 1 open at a time)
+            document.querySelectorAll('.mega-dropdown, .industries-menu, .mega-menu, .industries-dropdown').forEach(el => {
+                if (el !== trigger && el !== dropdown) {
+                    el.classList.remove('is-open', 'open');
+                }
+            });
+
+            if (closeTimer) {
+                clearTimeout(closeTimer);
+                closeTimer = null;
+            }
+            trigger.classList.add('is-open');
+            dropdown.classList.add('is-open');
+        }
+
+        function scheduleClose() {
+            if (closeTimer) clearTimeout(closeTimer);
+            closeTimer = setTimeout(() => {
+                trigger.classList.remove('is-open', 'open');
+                dropdown.classList.remove('is-open', 'open');
+            }, 200); // Smooth 200ms exit delay
+        }
+
+        // Desktop Hover Listeners: Strictly attached to navLink and dropdown panel
+        if (navLink) {
+            navLink.addEventListener('mouseenter', function () {
+                if (window.innerWidth >= 992) openMenu();
+            });
+            navLink.addEventListener('mouseleave', function () {
+                if (window.innerWidth >= 992) scheduleClose();
+            });
+        }
+
+        dropdown.addEventListener('mouseenter', function () {
+            if (window.innerWidth >= 992) openMenu();
+        });
+        dropdown.addEventListener('mouseleave', function () {
+            if (window.innerWidth >= 992) scheduleClose();
+        });
+
+        // Mobile / Tablet Click Accordion Toggle
+        if (navLink) {
+            navLink.addEventListener('click', function (e) {
+                if (window.innerWidth < 992) {
+                    const isChevron = e.target.tagName === 'I' || e.target.classList.contains('fa-chevron-down');
+                    const isHash = navLink.getAttribute('href') === '#';
+                    if (isChevron || isHash) {
+                        e.preventDefault();
+                        const isCurrentlyOpen = trigger.classList.contains('open');
+                        document.querySelectorAll('.mega-dropdown, .industries-menu').forEach(el => el.classList.remove('open', 'is-open'));
+                        if (!isCurrentlyOpen) {
+                            trigger.classList.add('open');
+                        }
+                    }
+                }
+            });
+        }
+    }
+
+    setupMegaDropdown('.mega-dropdown', '.mega-menu');
+    setupMegaDropdown('.industries-menu', '.industries-dropdown');
+
+    // 3. Auto-close Dropdowns & Mobile Navbar on link click
+    document.querySelectorAll('.mega-link, .industries-dropdown a').forEach(link => {
+        link.addEventListener('click', function () {
+            document.querySelectorAll('.mega-dropdown, .industries-menu, .mega-menu, .industries-dropdown').forEach(el => {
+                el.classList.remove('is-open', 'open');
+            });
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                if (bsCollapse) bsCollapse.hide();
+            }
+        });
+    });
+
+    // 4. Global Close on Escape Key
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.mega-dropdown, .industries-menu, .mega-menu, .industries-dropdown').forEach(el => {
+                el.classList.remove('is-open', 'open');
+            });
+        }
+    });
+
+    // 5. Global Close on Outside Click
+    document.addEventListener('click', function (e) {
+        if (
+            !e.target.closest('.mega-dropdown') &&
+            !e.target.closest('.industries-menu') &&
+            !e.target.closest('.mega-menu') &&
+            !e.target.closest('.industries-dropdown')
+        ) {
+            document.querySelectorAll('.mega-dropdown, .industries-menu, .mega-menu, .industries-dropdown').forEach(el => {
+                el.classList.remove('is-open', 'open');
+            });
+        }
+    });
+});
 
 // ==========================================
 // End of JavaScript File
