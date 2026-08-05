@@ -453,3 +453,83 @@ img {
     }
 }
 
+/* ==========================================
+   CTA Banner Website Theme Matching Styles
+   ========================================== */
+
+.join-section,
+.pricing-final-cta,
+.about-cta-premium,
+.cta-banner,
+.cta-banner-v2,
+.seo-final-cta,
+.android-final-cta,
+.wd-final-cta,
+.ios-final-cta,
+.cp-final-cta,
+.footer-cta-card,
+.cta-card {
+    background: linear-gradient(135deg, #411E79 0%, #5C2FA6 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 16px 40px rgba(65, 30, 121, 0.25) !important;
+    color: #ffffff !important;
+}
+
+.join-section h2,
+.pricing-final-cta h2,
+.about-cta-premium h2,
+.cta-banner h2,
+.cta-banner-v2 h2,
+.seo-final-cta h2,
+.android-final-cta h2,
+.wd-final-cta h2,
+.ios-final-cta h2,
+.cp-final-cta h2,
+.footer-cta-card h2,
+.cta-card h2,
+.cta-title {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background: none !important;
+}
+
+.join-section p,
+.pricing-final-cta p,
+.about-cta-premium p,
+.cta-banner p,
+.cta-banner-v2 p,
+.seo-final-cta p,
+.android-final-cta p,
+.wd-final-cta p,
+.ios-final-cta p,
+.cp-final-cta p,
+.footer-cta-card p,
+.cta-card p,
+.cta-subtext {
+    color: rgba(255, 255, 255, 0.88) !important;
+    opacity: 1 !important;
+}
+
+.join-section .role-chip {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    color: #ffffff !important;
+}
+
+.pricing-final-cta .btn-primary,
+.cta-banner .btn-primary,
+.about-btn-premium,
+.join-section .btn-primary,
+.cta-banner-v2 .btn-primary {
+    background: #ffffff !important;
+    color: var(--secondary-color, #411E79) !important;
+}
+
+.pricing-final-cta .btn-outline-primary,
+.cta-banner .btn-outline-primary,
+.cta-banner-v2 .btn-outline-primary {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
