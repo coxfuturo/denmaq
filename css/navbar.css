@@ -78,14 +78,13 @@
 }
 
 .logo {
-    height: 45px;
+    height: 70px;
     width: auto;
     transition: all var(--transition-normal);
 }
-
-.logo img-fluid {
+/* .logo img-fluid{
     height: 88px;
-}
+} */
 
 [data-theme="dark"] .logo {
     filter: brightness(0) invert(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
