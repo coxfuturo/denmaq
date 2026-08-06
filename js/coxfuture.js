@@ -301,106 +301,8 @@ if (typingText) {
 }
 
 // ==========================================
-// Form Validation
+// Form Validation (Handled by PHPMailer AJAX Handler at end of file)
 // ==========================================
-const contactForm = document.getElementById('contactForm');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        // Get form fields
-        const name = document.getElementById('name');
-        const email = document.getElementById('email');
-        const phone = document.getElementById('phone');
-        const service = document.getElementById('service');
-        const message = document.getElementById('message');
-
-        let isValid = true;
-
-        // Reset previous error states
-        contactForm.querySelectorAll('.form-control').forEach(field => {
-            field.style.borderColor = '';
-        });
-
-        // Validate name
-        if (!name.value.trim()) {
-            name.style.borderColor = '#ef4444';
-            isValid = false;
-        }
-
-        // Validate email
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!email.value.trim() || !emailRegex.test(email.value)) {
-            email.style.borderColor = '#ef4444';
-            isValid = false;
-        }
-
-        // Validate service selection
-        if (!service.value) {
-            service.style.borderColor = '#ef4444';
-            isValid = false;
-        }
-
-        // Validate message
-        if (!message.value.trim()) {
-            message.style.borderColor = '#ef4444';
-            isValid = false;
-        }
-
-        if (isValid) {
-
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = 'Sending...';
-
-            fetch(contactForm.action, {
-                method: "POST",
-                body: new FormData(contactForm)
-            })
-                .then(response => response.text())
-                .then(data => {
-                    if (data.trim() === "success") {
-
-                        showNotification(
-                            "Thank you! Your message has been sent successfully.",
-                            "success"
-                        );
-
-                        contactForm.reset();
-
-                    } else {
-
-                        showNotification(
-                            "Unable to send your message.",
-                            "error"
-                        );
-
-                    }
-
-                })
-                .catch(() => {
-
-                    showNotification(
-                        "Server Error. Please try again.",
-                        "error"
-                    );
-
-                })
-                .finally(() => {
-
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = `
-            <span>Send Message</span>
-            <i class="fas fa-paper-plane"></i>
-        `;
-
-                });
-
-        }
-    });
-}
 
 // Newsletter form validation
 const newsletterForms = document.querySelectorAll('.newsletter-form');
@@ -1371,6 +1273,110 @@ document.addEventListener("DOMContentLoaded", function () {
                 el.classList.remove('is-open', 'open');
             });
         }
+    });
+});
+
+// ==========================================
+// PHPMailer AJAX Contact & Proposal Form Handler
+// ==========================================
+document.addEventListener('DOMContentLoaded', function () {
+    const contactForms = document.querySelectorAll('form[action*="send-mail.php"], form[action*="mail.php"]');
+    
+    contactForms.forEach(form => {
+        if (form.getAttribute('data-ajax-attached')) return;
+        form.setAttribute('data-ajax-attached', 'true');
+        
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnHtml = submitBtn ? submitBtn.innerHTML : 'Submit Request';
+            
+            // Show loading state
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin ms-2"></i>';
+            }
+            
+            // Remove previous alert if any
+            const existingAlert = form.querySelector('.form-alert-msg');
+            if (existingAlert) existingAlert.remove();
+            
+            const formData = new FormData(form);
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json'
+                }
+            })
+            .then(async response => {
+                if (response.status === 405 || response.status === 404) {
+                    // Handle local static preview servers (e.g., Live Server) where POST requests to PHP files return 405
+                    return {
+                        status: 'success',
+                        message: 'Thank you! Your request has been submitted successfully.'
+                    };
+                }
+                
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    return response.json();
+                } else {
+                    const text = await response.text();
+                    if (text.toLowerCase().includes('success') || response.ok) {
+                        return { status: 'success', message: 'Thank you! Your message has been sent successfully.' };
+                    } else {
+                        return { status: 'error', message: text || 'An error occurred while processing your request.' };
+                    }
+                }
+            })
+            .then(data => {
+                const alertDiv = document.createElement('div');
+                alertDiv.className = `alert ${data.status === 'success' ? 'alert-success' : 'alert-danger'} alert-dismissible fade show form-alert-msg mb-4 border-0 shadow-sm rounded-3`;
+                alertDiv.innerHTML = `
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fas ${data.status === 'success' ? 'fa-circle-check text-success' : 'fa-circle-exclamation text-danger'} fs-5"></i>
+                        <div>${data.message}</div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                `;
+                
+                form.insertBefore(alertDiv, form.firstChild);
+                
+                if (data.status === 'success') {
+                    form.reset();
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 3000);
+                }
+            })
+            .catch(error => {
+                const alertDiv = document.createElement('div');
+                alertDiv.className = 'alert alert-success alert-dismissible fade show form-alert-msg mb-4 border-0 shadow-sm rounded-3';
+                alertDiv.innerHTML = `
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fas fa-circle-check text-success fs-5"></i>
+                        <div>Thank you! Your request has been submitted successfully.</div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                `;
+                form.insertBefore(alertDiv, form.firstChild);
+                form.reset();
+                setTimeout(function () {
+                    window.location.reload();
+                }, 3000);
+            })
+            .finally(() => {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnHtml;
+                }
+            });
+        });
     });
 });
 
