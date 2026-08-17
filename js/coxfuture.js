@@ -1381,5 +1381,40 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ==========================================
-// End of JavaScript File
+// Subtle Vanilla 3D Tilt Interaction System
 // ==========================================
+document.addEventListener("DOMContentLoaded", function () {
+    const isPointerFine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!isPointerFine || isReducedMotion) return;
+
+    const tiltCards = document.querySelectorAll('.solution-card, .re-feature-card, .feature-card, .re-ai-card, .ai-card, .doctor-card, .partner-card, .story-card, [data-tilt]');
+
+    tiltCards.forEach(card => {
+        card.style.transformStyle = 'preserve-3d';
+        
+        card.addEventListener('mousemove', function (e) {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            // Calculate tilt angle (-2.5 to +2.5 deg)
+            const rotateX = ((y - centerY) / centerY) * -2.5;
+            const rotateY = ((x - centerX) / centerX) * 2.5;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-6px) scale(1.015)`;
+        });
+
+        card.addEventListener('mouseleave', function () {
+            card.style.transform = '';
+        });
+    });
+});
+
+// ==========================================
+// End of JavaScript File
+// ==========================================
