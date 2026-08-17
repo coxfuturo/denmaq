@@ -533,3 +533,82 @@ img {
     border-color: rgba(255, 255, 255, 0.35) !important;
 }
 
+/* ==========================================
+   Global Micro-Interactions & Hover Polish
+   ========================================== */
+.btn i,
+.btn .fa-arrow-right,
+.btn .fa-chevron-right {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn:hover i.fa-arrow-right,
+.btn:hover i.fa-chevron-right,
+.btn:hover .arrow {
+    transform: translateX(4px);
+}
+
+.hover-lift {
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, background-color 0.35s ease !important;
+    will-change: transform, box-shadow;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .hover-lift:hover {
+        transform: translateY(-8px) scale(1.015);
+        box-shadow: 0 18px 40px -10px rgba(65, 30, 121, 0.12), 0 8px 20px -6px rgba(0, 0, 0, 0.06) !important;
+        border-color: rgba(65, 30, 121, 0.25) !important;
+    }
+
+    .hover-lift:hover h1,
+    .hover-lift:hover h2,
+    .hover-lift:hover h3,
+    .hover-lift:hover h4,
+    .hover-lift:hover h5,
+    .hover-lift:hover h6,
+    .hover-lift:hover .card-title {
+        transform: translateY(-2px);
+        transition: transform 0.35s ease;
+    }
+
+    .hover-lift img {
+        transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .hover-lift:hover img {
+        transform: scale(1.06);
+    }
+
+    .hover-lift:hover i.fa-arrow-right,
+    .hover-lift:hover .fa-arrow-right {
+        transform: translateX(5px);
+        transition: transform 0.35s ease;
+    }
+}
+
+.solution-card {
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, background-color 0.35s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .solution-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 45px -10px rgba(65, 30, 121, 0.14), 0 8px 22px -6px rgba(0, 0, 0, 0.08);
+        border-color: var(--secondary-color, #411E79);
+    }
+
+    .solution-card .solution-icon {
+        transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), background 0.35s ease, color 0.35s ease;
+    }
+
+    .solution-card:hover .solution-icon {
+        transform: scale(1.1) rotate(2deg);
+    }
+
+    .solution-card:hover h4 {
+        transform: translateY(-2px);
+        transition: transform 0.35s ease;
+    }
+}
+
+

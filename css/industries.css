@@ -1959,5 +1959,249 @@
             margin: 0;
         }
 
+/* ==========================================================================
+   UNIFIED PREMIUM HOVER INTERACTIONS SYSTEM FOR ALL INDUSTRY PAGES
+   ========================================================================== */
+
+/* Base transition setup for image containers */
+.re-img-frame,
+.ai-card-img,
+.user-feature-img,
+.doctor-card-img,
+.img-frame,
+.feature-pair-img,
+.admin-img,
+.tech-stack-img,
+.payments-img,
+.story-card-img,
+.hero-image {
+    overflow: hidden !important;
+}
+
+.re-img-frame img,
+.ai-card-img img,
+.user-feature-img img,
+.doctor-card-img img,
+.img-frame img,
+.feature-pair-img img,
+.admin-img img,
+.tech-stack-img img,
+.payments-img img,
+.story-card img,
+.faq-image,
+.hero-image img {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease, filter 0.4s ease !important;
+    will-change: transform;
+}
+
+/* Base transition setup for cards */
+.re-card,
+.re-feature-card,
+.re-side-card,
+.re-health-card,
+.re-feat-box,
+.re-tech-card,
+.re-ai-card,
+.re-agent-card,
+.admin-feature-item,
+.industry-tile,
+.ai-card,
+.user-feature-card,
+.partner-card,
+.why-food-card,
+.travel-solution-card,
+.doctor-card,
+.health-solution-card,
+.custom-card,
+.feature-card,
+.health-card,
+.side-card,
+.services-card,
+.story-card,
+.industry-card-v2,
+.service-card-v2 {
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, background-color 0.35s ease !important;
+    will-change: transform, box-shadow;
+}
+
+/* Icon base transition */
+.re-icon-float,
+.re-side-icon,
+.re-health-icon,
+.re-tech-icon,
+.re-ai-icon,
+.re-circle,
+.icon-float,
+.side-icon,
+.health-icon,
+.serv-icon,
+.circle,
+.ind-icon,
+.service-icon-box,
+.partner-card-icon,
+.tsl-icon,
+.admin-feature-item i,
+.industry-tile i,
+.travel-solution-card i,
+.health-solution-card i,
+.why-food-card i,
+.custom-card .card-icon {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, background 0.35s ease, color 0.35s ease !important;
+}
+
+/* Headings base transition */
+.re-card h5, .re-card .card-title,
+.re-feature-card h6,
+.re-side-text h5,
+.re-health-header h5, .re-health-header h6,
+.re-feat-box h6,
+.re-tech-content h6,
+.re-ai-body h5,
+.re-agent-card h5,
+.admin-feature-item h5,
+.industry-tile h4,
+.ai-card-body h4,
+.user-feature-body h5,
+.partner-card h4,
+.why-food-card h4,
+.travel-solution-card h4,
+.doctor-card-body h5,
+.health-solution-card h4,
+.custom-card .card-title,
+.card-body-text h6,
+.side-text h5,
+.services-card h5,
+.story-card-body h5,
+.industry-card-v2 h4,
+.service-card-v2 h3,
+.feature-pair-content h4 {
+    transition: transform 0.35s ease, color 0.35s ease;
+}
+
+/* Desktop Hover States */
+@media (hover: hover) and (pointer: fine) {
+    /* 1. Main Card Elevation & Glow */
+    .re-card:hover,
+    .re-feat-box:hover,
+    .re-ai-card:hover,
+    .re-agent-card:hover,
+    .admin-feature-item:hover,
+    .ai-card:hover,
+    .user-feature-card:hover,
+    .partner-card:hover,
+    .doctor-card:hover,
+    .custom-card:hover,
+    .health-card:hover,
+    .services-card:hover,
+    .story-card:hover {
+        transform: translateY(-8px) scale(1.015) !important;
+        box-shadow: 0 20px 45px -10px rgba(65, 30, 121, 0.14), 0 8px 22px -6px rgba(0, 0, 0, 0.08) !important;
+        border-color: var(--secondary-color, #411E79) !important;
+    }
+
+    .re-tech-card:hover,
+    .re-side-card:hover,
+    .side-card:hover {
+        transform: translateX(6px) translateY(-2px) !important;
+        box-shadow: 0 12px 30px -5px rgba(65, 30, 121, 0.12) !important;
+        border-color: var(--secondary-color, #411E79) !important;
+    }
+
+    /* 2. Glassmorphic / Dark Feature Cards */
+    .re-feature-card:hover,
+    .feature-card:hover {
+        transform: translateY(-8px) scale(1.015) !important;
+        border-color: rgba(65, 30, 121, 0.5) !important;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45), 0 0 25px rgba(65, 30, 121, 0.3) !important;
+        backdrop-filter: blur(14px) !important;
+    }
+
+    .re-health-card:hover {
+        transform: translateY(-6px) scale(1.01) !important;
+        background: rgba(255, 255, 255, 0.14) !important;
+        border-color: rgba(255, 255, 255, 0.25) !important;
+    }
+
+    .benefits-dark .health-card:hover {
+        background: rgba(255, 255, 255, 0.15) !important;
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    /* 3. Industry Tile & Solution Cards */
+    .industry-tile:hover,
+    .why-food-card:hover,
+    .travel-solution-card:hover,
+    .health-solution-card:hover {
+        transform: translateY(-8px) scale(1.02) !important;
+        box-shadow: 0 20px 45px -10px rgba(65, 30, 121, 0.15) !important;
+    }
+
+    /* 4. Image Scale on Card Hover */
+    .re-feature-card:hover .re-img-frame img,
+    .feature-card:hover .img-frame img,
+    .re-ai-card:hover img,
+    .ai-card:hover .ai-card-img img,
+    .user-feature-card:hover .user-feature-img img,
+    .doctor-card:hover .doctor-card-img img,
+    .feature-pair:hover .feature-pair-img img,
+    .admin-img:hover img,
+    .payments-img:hover img,
+    .story-card:hover img {
+        transform: scale(1.07) !important;
+    }
+
+    /* 5. Icons Micro-Animations */
+    .re-feature-card:hover .re-icon-float,
+    .feature-card:hover .icon-float,
+    .re-side-card:hover .re-side-icon,
+    .side-card:hover .side-icon,
+    .re-health-card:hover .re-health-icon,
+    .health-card:hover .health-icon,
+    .re-feat-box:hover .icon,
+    .re-tech-card:hover .re-tech-icon,
+    .re-ai-card:hover .re-ai-icon,
+    .admin-feature-item:hover i,
+    .industry-tile:hover i,
+    .partner-card:hover .partner-card-icon,
+    .why-food-card:hover i,
+    .travel-solution-card:hover i,
+    .health-solution-card:hover i,
+    .custom-card:hover .card-icon,
+    .services-card:hover .serv-icon {
+        transform: scale(1.1) rotate(2deg) !important;
+        box-shadow: 0 6px 18px rgba(65, 30, 121, 0.25);
+    }
+
+    .re-circle:hover,
+    .circle:hover,
+    .re-process-step:hover .re-circle,
+    .process-step:hover .circle {
+        transform: scale(1.12) translateY(-3px) !important;
+        box-shadow: 0 10px 25px rgba(65, 30, 121, 0.35) !important;
+    }
+
+    /* 6. Headings Micro-Movement */
+    .re-card:hover .card-title,
+    .re-feature-card:hover h6,
+    .re-side-card:hover h5,
+    .re-feat-box:hover h6,
+    .re-tech-card:hover h6,
+    .re-ai-card:hover h5,
+    .re-agent-card:hover h5,
+    .admin-feature-item:hover h5,
+    .ai-card:hover h4,
+    .user-feature-card:hover h5,
+    .partner-card:hover h4,
+    .doctor-card:hover h5,
+    .custom-card:hover .card-title,
+    .feature-card:hover h6,
+    .side-card:hover h5,
+    .services-card:hover h5,
+    .story-card:hover h5 {
+        transform: translateY(-2px);
+    }
+}
+
+
 
         /* ===== RESPONSIVE ===== */
