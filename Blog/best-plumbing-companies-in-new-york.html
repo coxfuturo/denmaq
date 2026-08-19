@@ -297,7 +297,19 @@
             color: rgba(255, 255, 255, 0.5);
             animation: fadeIn 0.9s ease 1.3s both;
         }
-        .hero-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--accent); } 50% { transform: translateY(6px); } }
+.hero-meta .dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: dotMove 1s ease-in-out infinite;
+}
+
+@keyframes dotMove {
+    50% {
+        transform: translateY(6px);
+    }
+}
 
         /* ============ ARTICLE LAYOUT ============ */
         .article { padding: 6rem 0 8rem; }
