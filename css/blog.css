@@ -38,6 +38,59 @@
     box-shadow:0 18px 45px rgba(0,0,0,.15);
 }
 
+.blog-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.blog-pagination button {
+    width: 56px;
+    height: 56px;
+    border: 1px solid #e1e5eb;
+    border-radius: 12px;
+    background: #fff;
+    color: #0878d1;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.blog-pagination button:hover {
+    background: #f5f8fc;
+    border-color: #0878d1;
+}
+
+.blog-pagination button.active {
+    background: #ff9f32;
+    color: #fff;
+    border-color: #ff9f32;
+}
+
+.blog-pagination .next-btn {
+    width: auto;
+    padding: 0 5px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    font-weight: 600;
+}
+
+.blog-pagination .next-btn:hover {
+    background: transparent;
+    color: #005fa8;
+}
+
+.blog-pagination .dots {
+    font-size: 18px;
+    color: #111;
+    padding: 0 2px;
+}
+
 /* Image */
 
 .blog-image{
