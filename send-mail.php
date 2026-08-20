@@ -49,7 +49,7 @@ $companyName = 'Denmaq';
 // SMTP Configuration (Update credentials when deploying to live cPanel / Hostinger server)
 $smtpHost = 'smtp.hostinger.com';
 $smtpUsername = 'info@coxfuture.com';
-$smtpPassword = 'Coxfuture@9217';
+$smtpPassword = 'denmaq@9217';
 $smtpPort = 465;
 $smtpSecure = PHPMailer::ENCRYPTION_SMTPS;
 $useSMTP = true; // Set to false if host uses native mail() sendmail
