@@ -1,5 +1,5 @@
 /* ==========================================
-   CoxFuture - Modern IT Solutions Website
+   Denmaq - Modern IT Solutions Website
    JavaScript for Interactions & Animations
    ========================================== */
 
@@ -925,7 +925,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     /* ==========================================
-       2. Life At CoxFuture — Gallery Lightbox
+       2. Life At Denmaq — Gallery Lightbox
        ========================================== */
     const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
     const lightbox = document.getElementById('galleryLightbox');
@@ -1141,7 +1141,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // ==========================================
 document.addEventListener("DOMContentLoaded", function () {
     // 1. Dynamic Active Navbar Link Highlighting
-    const currentPath = window.location.pathname.split('/').pop() || 'coxfuture.html';
+    const currentPath = window.location.pathname.split('/').pop() || 'denmaq.html';
     const isServiceDirectory = window.location.pathname.includes('/services/');
 
     document.querySelectorAll('#mainNav .nav-link').forEach(link => {
