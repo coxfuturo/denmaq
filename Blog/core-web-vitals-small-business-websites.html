@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="How to choose the right commercial generator for a Vancouver business: sizing, fuel type, permits, and noise bylaw considerations, plus red flags to avoid.">
+    <meta name="description" content="What are Core Web Vitals, and why do LCP, INP, and CLS matter for a small business website? A plain-English guide to the metrics, thresholds, and revenue impact.">
     <meta name="author" content="Denmaq">
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="How to Choose the Right Commercial Generator for a Vancouver Business">
-    <meta property="og:description" content="A practical guide to choosing a commercial standby generator in Vancouver — sizing, fuel type trade-offs, permits, noise bylaw limits, and what to check before signing a quote.">
-    <meta property="og:url" content="https://denmaq.org/Blog/how-to-choose-commercial-generator-vancouver-business.html">
+    <meta property="og:title" content="What Are Core Web Vitals and Why Do They Matter for Small Business Websites?">
+    <meta property="og:description" content="A plain-English guide to Core Web Vitals — LCP, INP, and CLS — what Google's thresholds mean in 2026, and why they matter for a small business website's rankings and revenue.">
+    <meta property="og:url" content="https://denmaq.org/Blog/core-web-vitals-small-business-websites.html">
     <meta property="og:site_name" content="Denmaq">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="How to Choose the Right Commercial Generator for a Vancouver Business">
-    <meta name="twitter:description" content="A practical guide to choosing a commercial standby generator in Vancouver — sizing, fuel type trade-offs, permits, noise bylaw limits, and what to check before signing a quote.">
-    <title>How to Choose the Right Commercial Generator for a Vancouver Business | Denmaq</title>
-    <link rel="canonical" href="https://denmaq.org/Blog/how-to-choose-commercial-generator-vancouver-business.html">
+    <meta name="twitter:title" content="What Are Core Web Vitals and Why Do They Matter for Small Business Websites?">
+    <meta name="twitter:description" content="A plain-English guide to Core Web Vitals — LCP, INP, and CLS — what Google's thresholds mean in 2026, and why they matter for a small business website's rankings and revenue.">
+    <title>What Are Core Web Vitals and Why Do They Matter for Small Business Websites? | Denmaq</title>
+    <link rel="canonical" href="https://denmaq.org/Blog/core-web-vitals-small-business-websites.html">
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/variables.css">
@@ -31,7 +29,7 @@
             --surface: #FFFFFF;
             --ink: #0A0A0A;
             --muted: #525252;
-            --accent: #C97A1E;
+            --accent: #4F46E5;
             --border: rgba(10, 10, 10, 0.15);
             --stroke: rgba(10, 10, 10, 0.3);
             --ghost: rgba(10, 10, 10, 0.07);
@@ -240,7 +238,7 @@
             position: relative;
             background:
                 linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.86)),
-                url('https://images.pexels.com/photos/159298/gears-cog-gear-machine-159298.jpeg') center / cover fixed no-repeat;
+                url('https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1200&w=1800') center / cover fixed no-repeat;
             background-color: #0A0A0A;
             color: #F9F9F8;
             overflow: hidden;
@@ -252,8 +250,8 @@
         .hero h1 {
             font-family: var(--serif);
             font-weight: 900;
-            font-size: clamp(2.2rem, 6.5vw, 5.25rem);
-            line-height: 1.02;
+            font-size: clamp(2rem, 6vw, 4.5rem);
+            line-height: 1.05;
             letter-spacing: -0.03em;
         }
 
@@ -270,7 +268,7 @@
         @keyframes rise { to { transform: translateY(0); } }
 
         .line-accent {
-            font-size: clamp(1.6rem, 4vw, 3rem);
+            font-size: clamp(1.4rem, 3.4vw, 2.5rem);
             font-weight: 500;
             font-style: italic;
             color: var(--accent);
@@ -393,6 +391,7 @@
         .look-item .idx { font-family: var(--serif); font-style: italic; font-size: 0.875rem; color: var(--accent); }
         .look-item h3 { font-family: var(--serif); font-size: 1.5rem; letter-spacing: -0.01em; margin-top: 0.5rem; }
         .look-item p { margin-top: 1rem; font-size: 0.95rem; line-height: 1.7; color: var(--muted); }
+        .look-item .tagline { display: block; margin-top: 0.35rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
 
         /* Framed images */
         .frame {
@@ -648,7 +647,7 @@
 </head>
 <body>
     <header>
-<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
             <div class="container-fluid px-3">
                 <a class="navbar-brand" href="../denmaq.html"><img src="../img/denmaq1.png" alt="Denmaq Logo" class="logo img-fluid"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open navigation"><span class="navbar-toggler-icon"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span></button>
@@ -667,19 +666,18 @@
     </header>
     <!-- Hero -->
     <header class="hero" id="top">
-<div class="container hero-inner">
+        <div class="container hero-inner">
             <h1>
-                <span class="line"><span class="line-inner">Choosing a</span></span>
-                <span class="line"><span class="line-inner">Commercial Generator</span></span>
-                <span class="line"><span class="line-inner line-accent">In Vancouver</span></span>
+                <span class="line"><span class="line-inner">Core Web Vitals</span></span>
+                <span class="line"><span class="line-inner line-accent">Explained for Small Business</span></span>
             </h1>
-            <p class="hero-sub">Sizing, fuel type, permits, and the noise bylaw limits that catch businesses off guard — what to actually check before you buy.</p>
+            <p class="hero-sub">What LCP, INP, and CLS actually measure, what Google's 2026 thresholds mean, and why they show up in your revenue, not just your rankings.</p>
             <div class="hero-meta">
                 <span>By Denmaq</span>
                 <span class="dot"></span>
                 <time datetime="2026-08-21">August 21, 2026</time>
                 <span class="dot"></span>
-                <span>9 min read</span>
+                <span>8 min read</span>
             </div>
         </div>
     </header>
@@ -688,18 +686,18 @@
 
         <!-- Lede -->
         <div class="lede">
-            <p class="lede-lead">Extreme weather is now the leading cause of power outages in British Columbia, responsible for well over half of them according to BC Hydro — and outages that used to be a rare inconvenience are becoming a real operating risk for businesses that can't afford to go dark.</p>
-            <p class="lede-body">A restaurant losing a walk-in cooler, a clinic losing refrigerated medication, or an office losing servers mid-shift are all different problems with different answers, but they share the same starting point: sizing a generator correctly and picking a fuel type that fits the site. Vancouver adds its own layer on top — a building permit, a noise bylaw with specific decibel and time-of-day limits, and, for larger installs, an engineer's sign-off. Here's how to actually work through the decision instead of guessing.</p>
+            <p class="lede-lead">Your site loads in a few seconds, the design looks clean, and the content is well-written. Then Search Console flags a "Core Web Vitals issues" warning, and you have no idea what it's actually telling you.</p>
+            <p class="lede-body">Core Web Vitals aren't opinions — they're three specific, numeric measurements Google takes from real visitors on real devices, and as of 2026 fewer than half of all websites pass all three. For a small business, that gap is either a quiet disadvantage or a real opportunity, depending on which side of it you're on. This guide breaks down what each metric measures, what the current thresholds actually are, and why the numbers translate directly into whether a visitor buys, calls, or leaves for a competitor.</p>
         </div>
 
         <!-- Mobile TOC -->
         <nav class="toc-mobile" aria-label="Table of contents">
             <p class="toc-title">In this article</p>
             <ol>
-                <li><a href="#what-to-look-for"><span class="idx">01</span>What to look for</a></li>
-                <li><a href="#fuel-types"><span class="idx">02</span>Comparing fuel types</a></li>
-                <li><a href="#evaluation-criteria"><span class="idx">03</span>Vancouver-specific requirements</a></li>
-                <li><a href="#red-flags"><span class="idx">04</span>Red flags to avoid</a></li>
+                <li><a href="#the-three-metrics"><span class="idx">01</span>The three metrics</a></li>
+                <li><a href="#why-matter"><span class="idx">02</span>Why they matter beyond rankings</a></li>
+                <li><a href="#how-measured"><span class="idx">03</span>How Google actually measures you</a></li>
+                <li><a href="#common-mistakes"><span class="idx">04</span>Common mistakes small business sites make</a></li>
                 <li><a href="#bottom-line"><span class="idx">05</span>The bottom line</a></li>
             </ol>
         </nav>
@@ -711,10 +709,10 @@
                 <div class="toc-sticky">
                     <p class="toc-title">In this article</p>
                     <ol>
-                        <li><a href="#what-to-look-for"><span class="idx">01</span>What to look for</a></li>
-                        <li><a href="#fuel-types"><span class="idx">02</span>Comparing fuel types</a></li>
-                        <li><a href="#evaluation-criteria"><span class="idx">03</span>Vancouver-specific requirements</a></li>
-                        <li><a href="#red-flags"><span class="idx">04</span>Red flags to avoid</a></li>
+                        <li><a href="#the-three-metrics"><span class="idx">01</span>The three metrics</a></li>
+                        <li><a href="#why-matter"><span class="idx">02</span>Why they matter beyond rankings</a></li>
+                        <li><a href="#how-measured"><span class="idx">03</span>How Google actually measures you</a></li>
+                        <li><a href="#common-mistakes"><span class="idx">04</span>Common mistakes small business sites make</a></li>
                         <li><a href="#bottom-line"><span class="idx">05</span>The bottom line</a></li>
                     </ol>
                 </div>
@@ -723,151 +721,160 @@
             <div class="content">
 
                 <!-- Chapter 01 -->
-                <section class="chapter" id="what-to-look-for">
+                <section class="chapter" id="the-three-metrics">
                     <div class="chapter-head">
                         <span class="ghost-num" aria-hidden="true">01</span>
-                        <h2>What to Look For</h2>
+                        <h2>The Three Metrics</h2>
                     </div>
                     <div class="two-col">
                         <div class="look-item">
                             <span class="idx">01 /</span>
-                            <h3>A professional load calculation</h3>
-                            <p>Sizing a commercial generator isn't a matter of adding up appliance wattages the way you might for a home. A qualified electrician needs to calculate both starting and running loads for everything that must stay powered, then size the unit with headroom, typically around 25%, for surge demand.</p>
+                            <h3>Largest Contentful Paint (LCP)</h3>
+                            <span class="tagline">Loading — good: under 2.5 seconds</span>
+                            <p>LCP measures how long it takes the biggest visible element on the page — usually a hero image, banner, or headline block — to fully render. It's the metric most sites still fail: only around 62% of mobile sites hit the 2.5-second threshold.</p>
                         </div>
                         <div class="look-item">
                             <span class="idx">02 /</span>
-                            <h3>An automatic transfer switch</h3>
-                            <p>Commercial applications require an ATS that detects an outage and switches power sources automatically. Manual switching isn't a realistic option for most business occupancies, especially unstaffed overnight operations.</p>
+                            <h3>Interaction to Next Paint (INP)</h3>
+                            <span class="tagline">Responsiveness — good: under 200 milliseconds</span>
+                            <p>INP measures the delay between a visitor clicking, tapping, or typing and the page visibly responding. It replaced First Input Delay in March 2024 and is stricter, since it evaluates every interaction on the page, not just the first one — making it the hardest of the three to pass.</p>
                         </div>
                         <div class="look-item">
                             <span class="idx">03 /</span>
-                            <h3>The right scale for your building</h3>
-                            <p>Most small businesses land in the 30–50 kW range to cover critical loads like HVAC, refrigeration, POS systems, and lighting. Larger offices and multi-tenant buildings often need 80–150 kW or more. Get a site-specific number rather than assuming a category fits.</p>
+                            <h3>Cumulative Layout Shift (CLS)</h3>
+                            <span class="tagline">Visual stability — good: under 0.1</span>
+                            <p>CLS measures how much visible content jumps around as a page loads — a button that shifts right as you're about to tap it, or text that reflows once an ad loads in. It's usually the easiest of the three to fix.</p>
                         </div>
                         <div class="look-item">
                             <span class="idx">04 /</span>
-                            <h3>Engineering sign-off for larger systems</h3>
-                            <p>Large-scale commercial installations typically require an engineering plan and an engineer's supervision to ensure correct sizing and code compliance. Smaller installs generally only need a building permit and a licensed electrician.</p>
+                            <h3>How Google grades all three</h3>
+                            <span class="tagline">Good, needs improvement, or poor</span>
+                            <p>Each metric gets rated independently. A score above 4 seconds for LCP, 500 milliseconds for INP, or 0.25 for CLS is rated "poor" and can actively hurt both rankings and conversions — the space between "good" and "poor" is the needs-improvement band.</p>
                         </div>
                     </div>
                     <figure class="frame">
                         <div class="clip">
-                            <img src="https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg" alt="Commercial standby generator installed outside a business building" loading="lazy" decoding="async">
+                            <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg" alt="Website performance dashboard showing loading and responsiveness metrics" loading="lazy">
                         </div>
-                        <figcaption>Sizing and siting a standby generator — Vancouver, BC</figcaption>
+                        <figcaption>What Google actually measures on your site</figcaption>
                     </figure>
                 </section>
 
                 <!-- Chapter 02 -->
-                <section class="chapter" id="fuel-types">
+                <section class="chapter" id="why-matter">
                     <div class="chapter-head">
                         <span class="ghost-num" aria-hidden="true">02</span>
-                        <h2>Comparing Fuel Types</h2>
+                        <h2>Why They Matter Beyond Rankings</h2>
                     </div>
                     <div class="table-wrap">
                         <table>
                             <thead>
                                 <tr>
-                                    <th scope="col">Fuel Type</th>
-                                    <th scope="col">Best For</th>
-                                    <th scope="col">Trade-Off</th>
+                                    <th scope="col">Documented Case</th>
+                                    <th scope="col">Change Made</th>
+                                    <th scope="col">Business Result</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">Natural gas</th>
-                                    <td>Businesses in urban and suburban areas with pipeline access wanting no on-site fuel storage</td>
-                                    <td>Runtime depends on an intact gas supply — not fully independent of outside infrastructure</td>
+                                    <th scope="row">Vodafone Italy (web.dev case study)</th>
+                                    <td>31% improvement in LCP on an A/B test between identical pages</td>
+                                    <td>8% more sales on the faster page</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Diesel</th>
-                                    <td>Operations that can't tolerate any downtime — critical refrigeration, data rooms, medical storage</td>
-                                    <td>Requires on-site fuel storage, governed by local fire and storage codes, plus periodic fuel management</td>
+                                    <th scope="row">Tokopedia (web.dev case study)</th>
+                                    <td>LCP reduced by 55%</td>
+                                    <td>23% increase in average session duration</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Propane (LPG)</th>
-                                    <td>Sites without natural gas service, or businesses wanting on-site storage with fewer environmental concerns than diesel</td>
-                                    <td>Higher cost per kWh than natural gas; still requires a storage tank and periodic refills</td>
+                                    <th scope="row">Nykaa (web.dev case study)</th>
+                                    <td>LCP improved by 40%</td>
+                                    <td>28% more organic traffic</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">iCook (web.dev case study)</th>
+                                    <td>CLS improved by 15%</td>
+                                    <td>10% increase in ad revenue</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.7;">Diesel tends to dominate the 100 kW-plus segment for continuous, high-duty-cycle operation, while natural gas is generally the practical default for small and mid-sized commercial sites with pipeline access already in place.</p>
-                </section>
-
-                <!-- Chapter 03 -->
-                <section class="chapter" id="evaluation-criteria">
-                    <div class="chapter-head">
-                        <span class="ghost-num" aria-hidden="true">03</span>
-                        <h2>Vancouver-Specific Requirements</h2>
-                    </div>
-                    <div class="cards">
-                        <div class="card">
-                            <span class="check" aria-hidden="true">&#10003;</span>
-                            <h3>Building permit</h3>
-                            <p>A building permit is required for a standby generator installation. Confirm your electrician or installer is pulling this permit as part of the job, not treating it as optional.</p>
-                        </div>
-                        <div class="card">
-                            <span class="check" aria-hidden="true">&#10003;</span>
-                            <h3>Noise bylaw compliance</h3>
-                            <p>Vancouver's Noise Control By-law sets specific sound level limits, and generators must meet them. A poorly sited or unenclosed unit can put a business in violation the first time it runs, let alone during testing.</p>
-                        </div>
-                        <div class="card">
-                            <span class="check" aria-hidden="true">&#10003;</span>
-                            <h3>Fuel storage compliance</h3>
-                            <p>If you're considering diesel or propane, fuel storage is governed by local fire and environmental regulations. Confirm your site and tank plan meet code before committing to a fuel type.</p>
-                        </div>
-                        <div class="card">
-                            <span class="check" aria-hidden="true">&#10003;</span>
-                            <h3>Proper siting and ventilation</h3>
-                            <p>A generator needs a stable foundation, adequate ventilation, and clearances that meet local safety and noise regulations — not just an empty spot behind the building.</p>
-                        </div>
-                    </div>
+                    <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.7;">Core Web Vitals are a confirmed Google ranking signal, but they function more as a tie-breaker between pages of similar content quality than as an override for weak content. Their bigger, more direct impact is on conversion: a contact form that lags on submission or a hero image that shifts as it loads is a silent, ongoing revenue leak — whether or not Google ever penalizes the page for it.</p>
                     <blockquote>
-                        <p><span class="tip">Pro tip:</span> Ask your installer to confirm, in writing, that the proposed unit and enclosure meet Vancouver's noise bylaw limits at your specific property line — not just a generic manufacturer decibel rating.</p>
+                        <p><span class="tip">Worth noting:</span> Technical performance is also becoming part of how AI-assisted search and generated answers evaluate page quality. Pages that fail Core Web Vitals tend to surface less often in AI-generated search results, not just traditional rankings.</p>
                     </blockquote>
                 </section>
 
+                <!-- Chapter 03 -->
+                <section class="chapter" id="how-measured">
+                    <div class="chapter-head">
+                        <span class="ghost-num" aria-hidden="true">03</span>
+                        <h2>How Google Actually Measures You</h2>
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <span class="check" aria-hidden="true">&#10003;</span>
+                            <h3>Field data, not a lab test</h3>
+                            <p>Google grades your site using real Chrome user data — the Chrome User Experience Report (CrUX) — not a simulated PageSpeed Insights run. Your Lighthouse score is a lab estimate, not your actual Core Web Vitals assessment.</p>
+                        </div>
+                        <div class="card">
+                            <span class="check" aria-hidden="true">&#10003;</span>
+                            <h3>The 75th percentile threshold</h3>
+                            <p>A page only passes when at least 75% of real visits meet the "good" threshold, measured over a rolling 28-day window. One fast visit on a good connection doesn't offset a pattern of slow ones on mobile.</p>
+                        </div>
+                        <div class="card">
+                            <span class="check" aria-hidden="true">&#10003;</span>
+                            <h3>Page-level, not site-wide</h3>
+                            <p>Core Web Vitals are evaluated per page. Your homepage can pass while a product or contact page fails — meaning a site-wide "everything's fine" assumption based on one page check can be wrong.</p>
+                        </div>
+                        <div class="card">
+                            <span class="check" aria-hidden="true">&#10003;</span>
+                            <h3>Mobile is the harder bar</h3>
+                            <p>The thresholds are identical for mobile and desktop, but mobile is far harder to pass in practice — worth checking separately rather than assuming a desktop pass means a mobile pass.</p>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- Chapter 04 -->
-                <section class="chapter" id="red-flags">
+                <section class="chapter" id="common-mistakes">
                     <div class="chapter-head">
                         <span class="ghost-num" aria-hidden="true">04</span>
-                        <h2>Red Flags to Avoid</h2>
+                        <h2>Common Mistakes Small Business Sites Make</h2>
                     </div>
                     <div class="cards">
                         <div class="flag">
                             <span class="x" aria-hidden="true">&#10005;</span>
                             <div>
-                                <h3>Sizing based on a guess, not a load calculation</h3>
-                                <p>A supplier who quotes a size without doing a proper load assessment is asking you to gamble on a five- or six-figure purchase.</p>
+                                <h3>Trusting the single PageSpeed number</h3>
+                                <p>The big colored score at the top of PageSpeed Insights is a weighted lab estimate. The three Vitals underneath it are what actually feed rankings, and they move independently of that headline number.</p>
                             </div>
                         </div>
                         <div class="flag">
                             <span class="x" aria-hidden="true">&#10005;</span>
                             <div>
-                                <h3>No mention of a permit or ATS</h3>
-                                <p>If a proposal skips the building permit or doesn't include an automatic transfer switch, the installation isn't code-compliant for a business occupancy.</p>
+                                <h3>Unoptimized hero images</h3>
+                                <p>A large, uncompressed banner image is the single most common cause of a failed LCP score — and it's usually the first thing a small business site owner uploaded without thinking about file size.</p>
                             </div>
                         </div>
                         <div class="flag">
                             <span class="x" aria-hidden="true">&#10005;</span>
                             <div>
-                                <h3>No noise bylaw check</h3>
-                                <p>An installer unfamiliar with Vancouver's noise control requirements can leave you facing complaints, fines, or a forced relocation of the unit after it's already installed.</p>
+                                <h3>Ads or embeds that load in late</h3>
+                                <p>A chat widget, review badge, or ad that loads after the initial page render often pushes existing content down the page — the most common cause of a poor CLS score.</p>
                             </div>
                         </div>
                         <div class="flag">
                             <span class="x" aria-hidden="true">&#10005;</span>
                             <div>
-                                <h3>No maintenance plan included</h3>
-                                <p>A standby generator needs periodic servicing — typically every 250 to 500 running hours, plus regular self-tests. A quote with no mention of ongoing service is missing half the picture.</p>
+                                <h3>Heavy, unoptimized JavaScript</h3>
+                                <p>Fixing a poor INP score usually requires rethinking how the page's code handles clicks and taps — it can't be solved with a simple cache setting or plugin the way LCP sometimes can.</p>
                             </div>
                         </div>
                         <div class="flag">
                             <span class="x" aria-hidden="true">&#10005;</span>
                             <div>
-                                <h3>A single fuel option pushed without discussion</h3>
-                                <p>Diesel, natural gas, and propane each fit different situations. A supplier who pushes one option without asking about your site, runtime needs, or budget may be selling what's easiest for them, not what fits you.</p>
+                                <h3>Only checking the homepage</h3>
+                                <p>Since Vitals are evaluated per page, a contact form or checkout page with a slow-loading script can be silently costing conversions while the homepage looks fine.</p>
                             </div>
                         </div>
                     </div>
@@ -881,14 +888,14 @@
                     </div>
                     <div class="bottom-grid">
                         <div>
-                            <p>Choosing the right commercial generator comes down to three decisions made in the right order: get an accurate load calculation before anything else, pick the fuel type that actually fits your site and runtime needs, and confirm the installer is handling Vancouver's permit and noise bylaw requirements as part of the job, not as an afterthought.</p>
-                            <p>With extreme weather now the leading driver of BC power outages, backup power has moved from a nice-to-have to a real operating decision for many Vancouver businesses. <strong>Size it right the first time.</strong></p>
+                            <p>Core Web Vitals boil down to three plain questions: does the page load fast enough to feel instant, does it respond the moment someone taps something, and does it hold still while they're reading it. None of that requires understanding the underlying code — it just requires checking real numbers instead of assuming a site "feels fast enough."</p>
+                            <p>With fewer than half of sites passing all three thresholds in 2026, a small business that fixes even one weak metric — usually LCP first, since it fails most often and ties most directly to conversion — is often moving ahead of the majority of its competitors, not just catching up to Google's bar. <strong>Measure it before you guess at it.</strong></p>
                         </div>
                         <figure class="frame">
                             <div class="clip">
-                                <img src="https://images.pexels.com/photos/159298/gears-cog-gear-machine-159298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Industrial power equipment representing commercial backup power planning" loading="lazy" decoding="async">
+                                <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Small business owner reviewing website analytics on a laptop" loading="lazy">
                             </div>
-                            <figcaption>Backup power, sized to the business it protects</figcaption>
+                            <figcaption>Page speed, measured in real revenue</figcaption>
                         </figure>
                     </div>
                 </section>
@@ -901,11 +908,11 @@
     <section class="cta" id="cta">
         <div class="container cta-inner">
             <p class="overline">Next step</p>
-            <h2>Not sure what size or fuel type fits your business?</h2>
-            <p class="lead">We can help you get a proper load assessment and connect with trusted, licensed generator installers in Metro Vancouver.</p>
+            <h2>Not sure how your site actually scores?</h2>
+            <p class="lead">We can help you check your Core Web Vitals and connect with the right team to fix what's actually costing you conversions.</p>
             <div class="cta-actions">
                 <a class="btn-primary" href="../pages/contact.html">Get Recommendations</a>
-                <a class="btn-outline" href="#what-to-look-for">Re-read the Guide</a>
+                <a class="btn-outline" href="#the-three-metrics">Re-read the Guide</a>
             </div>
         </div>
     </section>
@@ -1045,7 +1052,7 @@
     </footer>
 
     <button class="scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script defer src="../js/denmaq.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/denmaq.js"></script>
 </body>
 </html>
