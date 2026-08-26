@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKEHZKQS0E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BKEHZKQS0E');
+    </script>
+    <meta name="google-site-verification" content="56SLsRdyPdhWwo4yUH843MLRAgxA54bYQi-gLmPZC6s" />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Looking for the best plumbing companies in New York? Learn what businesses should consider when choosing a reliable commercial plumber and plumbing service provider.">
     <meta name="author" content="Denmaq">
@@ -133,14 +145,12 @@
         .btn-quote .arrow { transition: transform 0.3s; display: inline-block; }
         .btn-quote:hover .arrow { transform: translate(2px, -2px); }
 
-
         .nav-cta {
             margin-left: 1rem;
             padding: 10px 24px;
             font-size: 0.9rem;
         }   
 
-        
 .btn-primary {
     background: var(--secondary-color);
     color: white;
@@ -187,8 +197,9 @@
         }
         .nav-toggler .bar { display: block; width: 18px; height: 2px; background: var(--ink); transition: transform 0.3s, opacity 0.3s; }
 
-        /* ============ DARK THEME (pure CSS toggle, no JS) ============ */
-        body:has(#theme-check:checked) {
+        /* ============ DARK THEME (data-theme) ============ */
+        /* Dark mode overrides using data-theme */
+        [data-theme="dark"] {
             --bg: #0E1014;
             --surface: #161A22;
             --ink: #F2F2EF;
@@ -197,14 +208,14 @@
             --stroke: rgba(255, 255, 255, 0.28);
             --ghost: rgba(255, 255, 255, 0.06);
         }
-        body:has(#theme-check:checked) .site-header { background: rgba(14, 16, 20, 0.72); }
-        body:has(#theme-check:checked) .theme-toggle .moon-icon { display: none; }
-        body:has(#theme-check:checked) .theme-toggle .sun-icon { display: inline; }
-        body:has(#theme-check:checked) .toc a,
-        body:has(#theme-check:checked) .toc-mobile a { color: var(--muted); border-left-color: var(--border); }
-        body:has(#theme-check:checked) .frame figcaption { color: rgba(255, 255, 255, 0.4); }
-        body:has(#theme-check:checked) .footer-widget h4,
-        body:has(#theme-check:checked) .footer-legal { color: rgba(255, 255, 255, 0.4); }
+        [data-theme="dark"] .site-header { background: rgba(14, 16, 20, 0.72); }
+        [data-theme="dark"] .theme-toggle .moon-icon { display: none; }
+        [data-theme="dark"] .theme-toggle .sun-icon { display: inline; }
+        [data-theme="dark"] .toc a,
+        [data-theme="dark"] .toc-mobile a { color: var(--muted); border-left-color: var(--border); }
+        [data-theme="dark"] .frame figcaption { color: rgba(255, 255, 255, 0.4); }
+        [data-theme="dark"] .footer-widget h4,
+        [data-theme="dark"] .footer-legal { color: rgba(255, 255, 255, 0.4); }
 
         /* Mobile nav  checkbox driven, no JS */
         @media (max-width: 991px) {
@@ -492,7 +503,6 @@
         .bottom-grid strong { color: var(--ink); }
         .bottom-grid .frame { margin-top: 0; }
 
-
         /* ============ CTA ============ */
         .cta { background: #0A0A0A; color: #F9F9F8; }
         .cta-inner { padding: 8rem 0 9rem; }
@@ -541,7 +551,6 @@
             transition: border-color 0.3s, background 0.3s;
         }
         .btn-outline:hover { border-color: #fff; background: rgba(255, 255, 255, 0.1); }
-
 
         /* ============ RESPONSIVE ============ */
         @media (min-width: 768px) {
@@ -655,12 +664,11 @@
         .hero .hero-inner { padding-top: 18rem !important; }
         @media (max-width: 767px) { .hero .hero-inner { padding-top: 11rem !important; } }
 
-    
     </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
             <div class="container-fluid px-3">
                 <a class="navbar-brand" href="../denmaq.html"><img src="../img/denmaq1.png" alt="Denmaq Logo" class="logo img-fluid"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open navigation"><span class="navbar-toggler-icon"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span></button>
@@ -679,7 +687,7 @@
     </header>
 <!-- Hero -->
     <header class="hero" id="top">
-        <div class="container hero-inner">
+<div class="container hero-inner">
             <h1>
                 <span class="line"><span class="line-inner">Best Plumbing</span></span>
                 <span class="line"><span class="line-inner">Companies in</span></span>
@@ -765,7 +773,7 @@
                     </div>
                     <figure class="frame">
                         <div class="clip">
-                            <img src="https://images.pexels.com/photos/1181738/pexels-photo-1181738.jpeg" alt="Facilities team reviewing a commercial maintenance plan" loading="lazy">
+                            <img src="https://images.pexels.com/photos/1181738/pexels-photo-1181738.jpeg" alt="Facilities team reviewing a commercial maintenance plan" loading="lazy" decoding="async">
                         </div>
                         <figcaption>Evaluating commercial service partners  New York</figcaption>
                     </figure>
@@ -913,7 +921,7 @@
                         </div>
                         <figure class="frame">
                             <div class="clip">
-                                <img src="https://images.pexels.com/photos/17180355/pexels-photo-17180355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Industrial piping infrastructure" loading="lazy">
+                                <img src="https://images.pexels.com/photos/17180355/pexels-photo-17180355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Industrial piping infrastructure" loading="lazy" decoding="async">
                             </div>
                             <figcaption>Commercial infrastructure‚ built to last</figcaption>
                         </figure>
@@ -957,34 +965,7 @@
                 clients worldwide.
               </p>
               <div class="footer-social">
-                <a
-                  href="https://x.com/Denmaq"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="fa-brands fa-x-twitter"></i
-                ></a>
-                <a
-                  href="https://www.linkedin.com/company/coxfuture-technologies-pvt-ltd"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-                <a
-                  href="https://www.instagram.com/denmaq_?utm_source=qr&igsh=MTdicWhwa2huYmNsOQ=="
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-                <a
-                  href="https://www.facebook.com/share/1JPFfs8ref/"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="fab fa-facebook"></i
-                ></a>
+
               </div>
             </div>
           </div>
@@ -1054,7 +1035,7 @@
                 <li>
                   <div class="d-flex align-items-center gap-3">
                     <i class="fa-solid fa-phone"></i
-                    ><a href="tel:+919217790770">+91 92177 90770</a>
+                    ><a href="tel:+16464537977">+1 (646) 453-7977</a>
                   </div>
                 </li>
                 <li>
@@ -1085,8 +1066,8 @@
     </footer>
 
     <button class="scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/denmaq.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="../js/denmaq.js"></script>
 </body>
 </html>
 

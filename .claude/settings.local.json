@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat)",
+      "Bash(chmod +x /tmp/add-complete-dark-mode.sh)",
+      "Bash(bash /tmp/add-complete-dark-mode.sh)",
+      "Read(//tmp/**)"
+    ]
+  }
+}

@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKEHZKQS0E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BKEHZKQS0E');
+    </script>
+    <meta name="google-site-verification" content="56SLsRdyPdhWwo4yUH843MLRAgxA54bYQi-gLmPZC6s" />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Looking for the best commercial HVAC companies in New York? Learn what businesses should consider when choosing a reliable HVAC contractor and service provider.">
     <meta name="author" content="Denmaq">
@@ -184,8 +196,9 @@
         }
         .nav-toggler .bar { display: block; width: 18px; height: 2px; background: var(--ink); transition: transform 0.3s, opacity 0.3s; }
 
-        /* ============ DARK THEME ============ */
-        body:has(#theme-check:checked) {
+        /* ============ DARK THEME (data-theme) ============ */
+        /* Dark mode overrides using data-theme */
+        [data-theme="dark"] {
             --bg: #0E1014;
             --surface: #161A22;
             --ink: #F2F2EF;
@@ -194,14 +207,14 @@
             --stroke: rgba(255, 255, 255, 0.28);
             --ghost: rgba(255, 255, 255, 0.06);
         }
-        body:has(#theme-check:checked) .site-header { background: rgba(14, 16, 20, 0.72); }
-        body:has(#theme-check:checked) .theme-toggle .moon-icon { display: none; }
-        body:has(#theme-check:checked) .theme-toggle .sun-icon { display: inline; }
-        body:has(#theme-check:checked) .toc a,
-        body:has(#theme-check:checked) .toc-mobile a { color: var(--muted); border-left-color: var(--border); }
-        body:has(#theme-check:checked) .frame figcaption { color: rgba(255, 255, 255, 0.4); }
-        body:has(#theme-check:checked) .footer-widget h4,
-        body:has(#theme-check:checked) .footer-legal { color: rgba(255, 255, 255, 0.4); }
+        [data-theme="dark"] .site-header { background: rgba(14, 16, 20, 0.72); }
+        [data-theme="dark"] .theme-toggle .moon-icon { display: none; }
+        [data-theme="dark"] .theme-toggle .sun-icon { display: inline; }
+        [data-theme="dark"] .toc a,
+        [data-theme="dark"] .toc-mobile a { color: var(--muted); border-left-color: var(--border); }
+        [data-theme="dark"] .frame figcaption { color: rgba(255, 255, 255, 0.4); }
+        [data-theme="dark"] .footer-widget h4,
+        [data-theme="dark"] .footer-legal { color: rgba(255, 255, 255, 0.4); }
 
         @media (max-width: 991px) {
             .nav-toggler { display: flex; }
@@ -607,7 +620,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
             <div class="container-fluid px-3">
                 <a class="navbar-brand" href="../denmaq.html"><img src="../img/denmaq1.png" alt="Denmaq Logo" class="logo img-fluid"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open navigation"><span class="navbar-toggler-icon"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span></button>
@@ -627,7 +640,7 @@
 
     <!-- Hero -->
     <header class="hero" id="top">
-        <div class="container hero-inner">
+<div class="container hero-inner">
             <h1>
                 <span class="line"><span class="line-inner">Best Commercial</span></span>
                 <span class="line"><span class="line-inner">HVAC Companies</span></span>
@@ -713,7 +726,7 @@
                     </div>
                     <figure class="frame">
                         <div class="clip">
-                            <img src="https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg" alt="Technician inspecting a commercial rooftop HVAC unit" loading="lazy">
+                            <img src="https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg" alt="Technician inspecting a commercial rooftop HVAC unit" loading="lazy" decoding="async">
                         </div>
                         <figcaption>Evaluating commercial HVAC partners — New York</figcaption>
                     </figure>
@@ -866,7 +879,7 @@
                         </div>
                         <figure class="frame">
                             <div class="clip">
-                                <img src="https://images.pexels.com/photos/6474471/pexels-photo-6474471.jpeg" alt="Commercial HVAC ductwork and mechanical infrastructure" loading="lazy">
+                                <img src="https://images.pexels.com/photos/6474471/pexels-photo-6474471.jpeg" alt="Commercial HVAC ductwork and mechanical infrastructure" loading="lazy" decoding="async">
                             </div>
                             <figcaption>Commercial HVAC infrastructure — built for reliability</figcaption>
                         </figure>
@@ -910,34 +923,7 @@
                 clients worldwide.
               </p>
               <div class="footer-social">
-                <a
-                  href="https://x.com/Denmaq"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="fa-brands fa-x-twitter"></i
-                ></a>
-                <a
-                  href="https://www.linkedin.com/company/coxfuture-technologies-pvt-ltd"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-                <a
-                  href="https://www.instagram.com/denmaq_?utm_source=qr&igsh=MTdicWhwa2huYmNsOQ=="
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-                <a
-                  href="https://www.facebook.com/share/1JPFfs8ref/"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="fab fa-facebook"></i
-                ></a>
+
               </div>
             </div>
           </div>
@@ -994,7 +980,7 @@
                 <li>
                   <div class="d-flex align-items-center gap-3">
                     <i class="fa-solid fa-phone"></i
-                    ><a href="tel:+919217790770">+91 92177 90770</a>
+                    ><a href="tel:+16464537977">+1 (646) 453-7977</a>
                   </div>
                 </li>
                 <li>
@@ -1025,7 +1011,7 @@
     </footer>
 
     <button class="scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/denmaq.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="../js/denmaq.js"></script>
 </body>
 </html>
