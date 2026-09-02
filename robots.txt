@@ -1,4 +1,12 @@
 User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /*.php$
 Allow: /
 
+# Crawler delays
+Crawl-delay: 1
+
+# Sitemap
 Sitemap: https://denmaq.com/sitemap.xml
