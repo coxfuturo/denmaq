@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKEHZKQS0E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BKEHZKQS0E');
+    </script>
+    <meta name="google-site-verification" content="56SLsRdyPdhWwo4yUH843MLRAgxA54bYQi-gLmPZC6s" />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A 20-point small business website audit checklist for 2026 — Core Web Vitals, mobile responsiveness, technical SEO, and UX issues to check before hiring a web developer.">
+    <meta name="author" content="Denmaq">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Small Business Website Audit Checklist: 20 Things to Check Before Hiring a Developer">
+    <meta property="og:description" content="A prioritized 20-point website audit checklist for 2026 — Core Web Vitals, technical SEO, content, and UX — so you know exactly what to fix before hiring a developer.">
+    <meta property="og:url" content="https://denmaq.org/Blog/small-business-website-audit-checklist.html">
+    <meta property="og:site_name" content="Denmaq">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Small Business Website Audit Checklist: 20 Things to Check Before Hiring a Developer">
+    <meta name="twitter:description" content="A prioritized 20-point website audit checklist for 2026 — Core Web Vitals, technical SEO, content, and UX — so you know exactly what to fix before hiring a developer.">
+    <title>Small Business Website Audit Checklist: 20 Things to Check Before Hiring a Developer | Denmaq</title>
+    <link rel="canonical" href="https://denmaq.org/Blog/small-business-website-audit-checklist.html">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300..700&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F9F9F8;
+            --surface: #FFFFFF;
+            --ink: #0A0A0A;
+            --muted: #525252;
+            --accent: #C97A1E;
+            --border: rgba(10, 10, 10, 0.15);
+            --stroke: rgba(10, 10, 10, 0.3);
+            --ghost: rgba(10, 10, 10, 0.07);
+            --serif: 'Playfair Display', Georgia, serif;
+            --sans: 'Inter', system-ui, sans-serif;
+            --container: 1400px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--ink);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+
+        ::selection { background: var(--accent); color: #fff; }
+
+        a { color: inherit; }
+        img { display: block; max-width: 100%; }
+
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+
+        /* ============ HEADER ============ */
+        .hidden-check { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+
+        .site-header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 50;
+            background: rgba(249, 249, 248, 0.72);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            animation: navDrop 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        @keyframes navDrop { from { transform: translateY(-80px); } to { transform: translateY(0); } }
+
+        .site-nav {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            height: 4.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .brand { display: inline-flex; align-items: center; text-decoration: none; }
+        .logo { height: 2.1rem; width: auto; display: block; }
+
+        .nav-menu { display: flex; align-items: center; gap: 2rem; }
+        .nav-list { list-style: none; display: flex; align-items: center; gap: 1.75rem; }
+        .nav-link {
+            display: inline-block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--muted);
+            text-decoration: none;
+            padding: 0.25rem 0;
+            border-bottom: 2px solid transparent;
+            transition: color 0.3s, border-color 0.3s;
+        }
+        .nav-link:hover { color: var(--ink); }
+        .nav-link.active { color: var(--ink); border-bottom-color: var(--accent); }
+
+        .nav-actions { display: flex; align-items: center; gap: 1rem; }
+        .theme-toggle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.4rem;
+            height: 2.4rem;
+            border: 1px solid var(--border);
+            color: var(--ink);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: border-color 0.3s, color 0.3s;
+        }
+        .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+        .theme-toggle .sun-icon { display: none; }
+
+        .btn-quote {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--accent);
+            color: #fff;
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .btn-quote:hover { background: var(--ink); }
+        .btn-quote .arrow { transition: transform 0.3s; display: inline-block; }
+        .btn-quote:hover .arrow { transform: translate(2px, -2px); }
+
+
+        .nav-cta {
+            margin-left: 1rem;
+            padding: 10px 24px;
+            font-size: 0.9rem;
+        }   
+
+        
+.btn-primary {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 30px;
+    font-family: var(--font-secondary);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    letter-spacing: var(--tracking-wide);
+    border-radius: var(--radius-pill);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.nav-cta,
+.nav-cta:hover,
+.nav-cta:focus,
+.nav-cta:active {
+    background-color: #4b218d !important;
+    color: #ffffff !important;
+    border-color: #4b218d !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+}
+
+        .nav-toggler {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            width: 2.6rem;
+            height: 2.6rem;
+            border: 1px solid var(--border);
+            cursor: pointer;
+        }
+        .nav-toggler .bar { display: block; width: 18px; height: 2px; background: var(--ink); transition: transform 0.3s, opacity 0.3s; }
+
+        /* ============ DARK THEME (data-theme) ============ */
+        /* Dark mode overrides using data-theme */
+        [data-theme="dark"] {
+            --bg: #0E1014;
+            --surface: #161A22;
+            --ink: #F2F2EF;
+            --muted: #9BA0AA;
+            --border: rgba(255, 255, 255, 0.14);
+            --stroke: rgba(255, 255, 255, 0.28);
+            --ghost: rgba(255, 255, 255, 0.06);
+        }
+        [data-theme="dark"] .site-header { background: rgba(14, 16, 20, 0.72); }
+        [data-theme="dark"] .theme-toggle .moon-icon { display: none; }
+        [data-theme="dark"] .theme-toggle .sun-icon { display: inline; }
+        [data-theme="dark"] .toc a,
+        [data-theme="dark"] .toc-mobile a { color: var(--muted); border-left-color: var(--border); }
+        [data-theme="dark"] .frame figcaption { color: rgba(255, 255, 255, 0.4); }
+        [data-theme="dark"] .footer-widget h4,
+        [data-theme="dark"] .footer-legal { color: rgba(255, 255, 255, 0.4); }
+
+        /* Mobile nav — checkbox driven, no JS */
+        @media (max-width: 991px) {
+            .nav-toggler { display: flex; }
+            .nav-menu {
+                position: absolute;
+                top: 100%; left: 0; right: 0;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+                background: var(--bg);
+                border-bottom: 1px solid var(--border);
+                padding: 0 1.5rem;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+            }
+            .nav-list { flex-direction: column; align-items: flex-start; gap: 0; width: 100%; }
+            .nav-list li { width: 100%; }
+            .nav-link { display: block; width: 100%; padding: 0.9rem 0; border-bottom: 1px solid var(--border); }
+            .nav-link.active { color: var(--accent); border-bottom: 1px solid var(--border); }
+            .nav-actions { padding: 1rem 0 1.25rem; }
+            body:has(#nav-check:checked) .nav-menu { max-height: 500px; }
+            body:has(#nav-check:checked) .nav-toggler .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+            body:has(#nav-check:checked) .nav-toggler .bar:nth-child(2) { opacity: 0; }
+            body:has(#nav-check:checked) .nav-toggler .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        }
+
+        /* ============ HERO ============ */
+        .hero {
+            position: relative;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.86)),
+                url('https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg') center / cover fixed no-repeat;
+            background-color: #0A0A0A;
+            color: #F9F9F8;
+            overflow: hidden;
+        }
+
+        .hero-inner { padding: 13rem 0 8rem; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .hero h1 {
+            font-family: var(--serif);
+            font-weight: 900;
+            font-size: clamp(2.2rem, 6.5vw, 5.25rem);
+            line-height: 1.02;
+            letter-spacing: -0.03em;
+        }
+
+        .line { display: block; overflow: hidden; padding-bottom: 0.08em; }
+        .line-inner {
+            display: block;
+            transform: translateY(110%);
+            animation: rise 1.1s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+        }
+        .line:nth-child(1) .line-inner { animation-delay: 0.35s; }
+        .line:nth-child(2) .line-inner { animation-delay: 0.48s; }
+        .line:nth-child(3) .line-inner { animation-delay: 0.61s; }
+        .line:nth-child(4) .line-inner { animation-delay: 0.74s; }
+        @keyframes rise { to { transform: translateY(0); } }
+
+        .line-accent {
+            font-size: clamp(1.6rem, 4vw, 3rem);
+            font-weight: 500;
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .hero-sub {
+            margin-top: 2.5rem;
+            max-width: 36rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.6);
+            animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1.1s both;
+        }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+        .hero-meta {
+            margin-top: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1.5rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            animation: fadeIn 0.9s ease 1.3s both;
+        }
+.hero-meta .dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: dotMove 1s ease-in-out infinite;
+}
+
+@keyframes dotMove {
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+        /* ============ ARTICLE LAYOUT ============ */
+        .article { padding: 6rem 0 8rem; }
+
+        .lede { max-width: 48rem; }
+        .lede-lead {
+            font-family: var(--serif);
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            line-height: 1.35;
+            letter-spacing: -0.01em;
+        }
+        .lede-body { margin-top: 2rem; font-size: 1.05rem; line-height: 1.75; color: var(--muted); }
+
+        .article-grid {
+            margin-top: 6rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+
+        /* TOC */
+        .toc { display: none; }
+        .toc-mobile {
+            margin-top: 3.5rem;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            padding: 1.5rem;
+        }
+        .toc-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.25rem;
+        }
+        .toc ol { list-style: none; }
+        .toc li + li, .toc-mobile li + li { margin-top: 1rem; }
+        .toc a, .toc-mobile a {
+            display: block;
+            border-left: 2px solid rgba(10, 10, 10, 0.1);
+            padding-left: 1rem;
+            font-size: 0.875rem;
+            color: rgba(10, 10, 10, 0.45);
+            text-decoration: none;
+            transition: color 0.3s, border-color 0.3s;
+        }
+        .toc a:hover, .toc-mobile a:hover { color: var(--ink); border-left-color: var(--accent); }
+        .toc .idx, .toc-mobile .idx { font-family: var(--serif); font-style: italic; margin-right: 0.5rem; }
+
+        /* Chapters */
+        .chapter { scroll-margin-top: 7rem; }
+        .chapter + .chapter { margin-top: 7rem; }
+
+        .chapter-head { position: relative; margin-bottom: 3rem; }
+        .ghost-num {
+            position: absolute;
+            top: -6rem;
+            left: -0.5rem;
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 8rem;
+            line-height: 1;
+            color: var(--ghost);
+            pointer-events: none;
+            user-select: none;
+        }
+        .chapter-head h2 {
+            position: relative;
+            font-family: var(--serif);
+            font-size: clamp(2.25rem, 5vw, 3rem);
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+        }
+
+        .two-col { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
+
+        .look-item { border-top: 1px solid var(--border); padding-top: 1.5rem; }
+        .look-item .idx { font-family: var(--serif); font-style: italic; font-size: 0.875rem; color: var(--accent); }
+        .look-item h3 { font-family: var(--serif); font-size: 1.5rem; letter-spacing: -0.01em; margin-top: 0.5rem; }
+        .look-item p { margin-top: 1rem; font-size: 0.95rem; line-height: 1.7; color: var(--muted); }
+
+        /* Framed images */
+        .frame {
+            border: 1px solid var(--border);
+            background: var(--surface);
+            padding: 0.5rem;
+            margin-top: 3.5rem;
+        }
+        .frame .clip { overflow: hidden; }
+        .frame img {
+            width: 100%;
+            filter: grayscale(1);
+            transition: filter 0.7s ease, transform 0.7s ease;
+        }
+        .frame:hover img { filter: grayscale(0); transform: scale(1.02); }
+        .frame figcaption {
+            padding: 0.75rem 0 0.25rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(10, 10, 10, 0.4);
+        }
+
+        /* Table */
+        .table-wrap { border: 1px solid var(--border); overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; background: var(--surface); font-size: 0.875rem; }
+        thead tr { background: #0A0A0A; color: #fff; text-align: left; }
+        th, td { padding: 1.25rem; vertical-align: top; }
+        thead th { font-weight: 600; }
+        tbody tr { border-bottom: 1px solid var(--border); transition: background 0.3s; }
+        tbody tr:last-child { border-bottom: none; }
+        tbody tr:hover { background: var(--bg); }
+        tbody th { font-family: var(--serif); font-size: 1rem; font-weight: 700; text-align: left; }
+        td { color: var(--muted); line-height: 1.65; }
+
+        /* Checklist cards */
+        .cards { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+        .card {
+            position: relative;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            padding: 2rem;
+            transition: border-color 0.3s;
+        }
+        .card:hover { border-color: var(--accent); }
+        .card .check {
+            position: absolute;
+            top: 1.5rem; right: 1.5rem;
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1;
+            color: rgba(10, 10, 10, 0.1);
+            transition: color 0.3s;
+        }
+        .card:hover .check { color: var(--accent); }
+        .card h3 { font-family: var(--serif); font-size: 1.25rem; letter-spacing: -0.01em; padding-right: 3rem; }
+        .card p { margin-top: 1rem; font-size: 0.875rem; line-height: 1.7; color: var(--muted); }
+
+        /* Quote */
+        blockquote {
+            margin: 4rem 0;
+            border-left: 4px solid var(--accent);
+            padding-left: 2rem;
+        }
+        blockquote p {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: clamp(1.35rem, 3vw, 1.75rem);
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+        }
+        blockquote .tip { color: var(--accent); }
+
+        /* Red flags */
+        .flag {
+            display: flex;
+            gap: 1.25rem;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            padding: 1.5rem;
+            transition: border-color 0.3s;
+        }
+        .flag:hover { border-color: var(--ink); }
+        .flag .x {
+            flex-shrink: 0;
+            margin-top: 0.15rem;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--ink);
+            transition: color 0.3s;
+        }
+        .flag:hover .x { color: var(--accent); }
+        .flag h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 700; }
+        .flag p { margin-top: 0.5rem; font-size: 0.875rem; line-height: 1.65; color: var(--muted); }
+
+        .bottom-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
+        .bottom-grid p { font-size: 1.05rem; line-height: 1.75; color: var(--muted); }
+        .bottom-grid p + p { margin-top: 1.5rem; }
+        .bottom-grid strong { color: var(--ink); }
+        .bottom-grid .frame { margin-top: 0; }
+
+
+        /* ============ CTA ============ */
+        .cta { background: #0A0A0A; color: #F9F9F8; }
+        .cta-inner { padding: 8rem 0 9rem; }
+        .cta .overline {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+        .cta h2 {
+            margin-top: 1.5rem;
+            max-width: 56rem;
+            font-family: var(--serif);
+            font-weight: 900;
+            font-size: clamp(2.25rem, 6vw, 4.5rem);
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+        }
+        .cta p.lead { margin-top: 2rem; max-width: 36rem; color: rgba(255, 255, 255, 0.6); font-size: 1.05rem; line-height: 1.7; }
+        .cta-actions { margin-top: 3rem; display: flex; flex-wrap: wrap; gap: 1rem; }
+        .btn-primary {
+            background: var(--secondary-color);
+            color: #fff;
+            box-shadow: 0 1px 2px rgba(23, 15, 46, 0.06);
+        }
+        .btn-primary:hover { background: #fff; color: var(--ink); }
+        .btn-outline {
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            transition: border-color 0.3s, background 0.3s;
+        }
+        .btn-outline:hover { border-color: #fff; background: rgba(255, 255, 255, 0.1); }
+
+
+        /* ============ RESPONSIVE ============ */
+        @media (min-width: 768px) {
+            .two-col { grid-template-columns: 1fr 1fr; }
+            .cards { grid-template-columns: 1fr 1fr; }
+            .bottom-grid { grid-template-columns: 1fr 1fr; }
+            .footer-grid-4 { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (min-width: 1024px) {
+            .container, .navbar-inner { padding: 0 3rem; }
+            .article-grid { grid-template-columns: repeat(12, 1fr); gap: 6rem; }
+            .toc { display: block; grid-column: span 3; }
+            .toc-sticky { position: sticky; top: 7rem; }
+            .toc-mobile { display: none; }
+            .content { grid-column: span 9; max-width: 65ch; }
+            .footer-grid-4 { grid-template-columns: 1.3fr 1fr 1.3fr 1.6fr; }
+        }
+
+        @media (max-width: 767px) {
+            .hero-inner { padding: 9rem 0 5rem; }
+            .ghost-num { font-size: 5.5rem; top: -4.5rem; }
+            .cta-inner { padding: 5rem 0 6rem; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+            .line-inner { transform: none; }
+        }
+
+.cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cta-actions .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 214px;
+  height: 56px;
+  padding: 0 24px;
+
+  background: #482080;
+  color: #fff;
+  border: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cta-actions .btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 282px;
+  height: 56px;
+  padding: 0 30px;
+
+  background: #000;
+  color: #fff;
+  border: 1px solid #555;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.cta-actions .btn-primary:hover {
+  background: #5a289e;
+}
+
+.cta-actions .btn-outline:hover {
+  background: #151515;
+  border-color: #777;
+}
+
+@media (max-width: 600px) {
+  .cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-actions a {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+    </style>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style>
+        /* Keep the hero clear of the fixed shared site header. */
+        .hero .hero-inner { padding-top: 18rem !important; }
+        @media (max-width: 767px) { .hero .hero-inner { padding-top: 11rem !important; } }
+    </style>
+</head>
+<body>
+    <header>
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+            <div class="container-fluid px-3">
+                <a class="navbar-brand" href="../denmaq.html"><img src="../img/denmaq1.png" alt="Denmaq Logo" class="logo img-fluid"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open navigation"><span class="navbar-toggler-icon"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span></button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../denmaq.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../services/services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="../pages/blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+                    </ul>
+                    <div class="theme-changer"><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon moon-icon"></i><i class="fas fa-sun sun-icon"></i></button><a class="btn btn-primary nav-cta" href="../pages/contact.html">Get Started</a></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Hero -->
+    <header class="hero" id="top">
+<div class="container hero-inner">
+            <h1>
+                <span class="line"><span class="line-inner">Small Business</span></span>
+                <span class="line"><span class="line-inner">Website Audit Checklist</span></span>
+                <span class="line"><span class="line-inner line-accent">20 Things to Check First</span></span>
+            </h1>
+            <p class="hero-sub">Core Web Vitals, technical SEO, and UX issues to find and document before you ever get a developer on a call — so you're buying a fix, not a fishing expedition.</p>
+            <div class="hero-meta">
+                <span>By Denmaq</span>
+                <span class="dot"></span>
+                <time datetime="2026-08-25">August 25, 2026</time>
+                <span class="dot"></span>
+                <span>11 min read</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="article container" id="article">
+
+        <!-- Lede -->
+        <div class="lede">
+            <p class="lede-lead">Somewhere on your website right now, something is probably broken — a form that silently fails, an image that never compressed, a page that takes six seconds to load on a phone.</p>
+            <p class="lede-body">Most small business owners only find out when a customer mentions it, or when leads quietly dry up with no obvious cause. Running your own audit first, before you ever call a developer, changes the entire conversation: instead of "our website feels off," you can hand over a specific, prioritized list of what's actually wrong. That gets you a faster, cheaper, and more accurate quote — and it means you're not paying a developer's hourly rate just to find the problems a checklist could have found for free. Here are 20 things to check, organized by priority.</p>
+        </div>
+
+        <!-- Mobile TOC -->
+        <nav class="toc-mobile" aria-label="Table of contents">
+            <p class="toc-title">In this article</p>
+            <ol>
+                <li><a href="#what-to-look-for"><span class="idx">01</span>Speed and foundation</a></li>
+                <li><a href="#fuel-types"><span class="idx">02</span>Technical SEO and crawlability</a></li>
+                <li><a href="#evaluation-criteria"><span class="idx">03</span>Content, UX and conversion</a></li>
+                <li><a href="#red-flags"><span class="idx">04</span>Signs you need a developer now</a></li>
+                <li><a href="#bottom-line"><span class="idx">05</span>The bottom line</a></li>
+            </ol>
+        </nav>
+
+        <div class="article-grid">
+
+            <!-- Sticky TOC (desktop) -->
+            <nav class="toc" aria-label="Table of contents">
+                <div class="toc-sticky">
+                    <p class="toc-title">In this article</p>
+                    <ol>
+                        <li><a href="#what-to-look-for"><span class="idx">01</span>Speed and foundation</a></li>
+                        <li><a href="#fuel-types"><span class="idx">02</span>Technical SEO and crawlability</a></li>
+                        <li><a href="#evaluation-criteria"><span class="idx">03</span>Content, UX and conversion</a></li>
+                        <li><a href="#red-flags"><span class="idx">04</span>Signs you need a developer now</a></li>
+                        <li><a href="#bottom-line"><span class="idx">05</span>The bottom line</a></li>
+                    </ol>
+                </div>
+            </nav>
+
+            <div class="content">
+
+                <!-- Chapter 01 -->
+                <section class="chapter" id="what-to-look-for">
+                    <div class="chapter-head">
+                        <span class="ghost-num" aria-hidden="true">01</span>
+                        <h2>Speed and Foundation</h2>
+                    </div>
+                    <div class="two-col">
+                        <div class="look-item">
+                            <span class="idx">1 /</span>
+                            <h3>Core Web Vitals</h3>
+                            <p>Google's current "good" thresholds are Largest Contentful Paint (LCP) under 2.5 seconds, Interaction to Next Paint (INP) under 200 milliseconds, and Cumulative Layout Shift (CLS) below 0.1. Check your real numbers for free in Google Search Console or PageSpeed Insights — these are a confirmed ranking factor, not just a nice-to-have.</p>
+                        </div>
+                        <div class="look-item">
+                            <span class="idx">2 /</span>
+                            <h3>Mobile responsiveness</h3>
+                            <p>Over 60% of website traffic now comes from mobile devices, and Google indexes sites based on their mobile version first. Test your actual site on an actual phone, on a slower connection, not just by resizing a desktop browser window.</p>
+                        </div>
+                        <div class="look-item">
+                            <span class="idx">3 /</span>
+                            <h3>HTTPS and mixed content</h3>
+                            <p>Confirm every page loads securely with no "not secure" warning, and check for mixed content — secure pages that still load an image or script over an insecure connection, which browsers flag and some block outright.</p>
+                        </div>
+                        <div class="look-item">
+                            <span class="idx">4 /</span>
+                            <h3>Broken links and 404 pages</h3>
+                            <p>Crawl your own site with a free tool and note every dead internal link, missing image, and 404 error. Each one is a small dead end for both visitors and search engine crawlers.</p>
+                        </div>
+                    </div>
+                    <figure class="frame">
+                        <div class="clip">
+                            <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg" alt="Laptop displaying website analytics and performance data" loading="lazy" decoding="async">
+                        </div>
+                        <figcaption>Auditing the foundation before anything else</figcaption>
+                    </figure>
+                </section>
+
+                <!-- Chapter 02 -->
+                <section class="chapter" id="fuel-types">
+                    <div class="chapter-head">
+                        <span class="ghost-num" aria-hidden="true">02</span>
+                        <h2>Technical SEO &amp; Crawlability</h2>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Checklist Item</th>
+                                    <th scope="col">Why It Matters</th>
+                                    <th scope="col">Quick Check</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">5. Title tags &amp; meta descriptions</th>
+                                    <td>The title tag is the strongest single ranking signal a page controls — a generic default gives Google nothing to match against real searches</td>
+                                    <td>Confirm every page has a unique, descriptive title, not a platform default like "Home"</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6. XML sitemap &amp; robots.txt</th>
+                                    <td>These files tell search engines, and increasingly AI crawlers, what to index and what to skip</td>
+                                    <td>Confirm a sitemap exists and submit it in Google Search Console; check robots.txt isn't accidentally blocking important pages</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7. Canonical URLs</th>
+                                    <td>Many sites are unintentionally accessible at www and non-www, http and https, with and without trailing slashes — creating duplicate versions of the same page</td>
+                                    <td>Confirm only one version is canonical and the rest 301 redirect to it</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">8. Schema markup</th>
+                                    <td>Structured data helps search engines and AI answer engines like ChatGPT and Gemini understand and cite your content accurately</td>
+                                    <td>Check for basic schema (business info, reviews, products) using Google's Rich Results Test</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">9. Image alt text &amp; file size</th>
+                                    <td>Alt text helps accessibility and image search visibility; oversized images are one of the most common causes of a failing LCP score</td>
+                                    <td>Spot-check key pages for missing alt text and images over 200KB that haven't been compressed</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">10. URL structure &amp; internal linking</th>
+                                    <td>Short, descriptive URLs and strong internal linking concentrate authority on the pages that actually generate leads</td>
+                                    <td>Check that key pages are reachable within three clicks from the homepage, and look for orphan pages with no internal links</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--muted); line-height: 1.7;">This is the layer most owners never look at directly, and where a developer's time is often best spent — but documenting what you find first still saves real hours on the invoice.</p>
+                </section>
+
+                <!-- Chapter 03 -->
+                <section class="chapter" id="evaluation-criteria">
+                    <div class="chapter-head">
+                        <span class="ghost-num" aria-hidden="true">03</span>
+                        <h2>Content, UX &amp; Conversion</h2>
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <span class="check" aria-hidden="true">&#10003;</span>
+                            <h3>11. Clear calls-to-action</h3>
+                            <p>Every key page should make it obvious what you want a visitor to do next — call, book, buy, or contact — without making them hunt for it.</p>
+                        </div>
+                        <div class="card">
+                            <span class="check" aria-hidden="true">&#10003;</span>
+                            <h3>12. Consistent contact information</h3>
+                            <p>Your business name, address, and phone number should match exactly across your website, Google Business Profile, and any directory listings — inconsistency quietly hurts local search visibility.</p>
+                        </div>
+                        <div class="card">
+                            <span class="check" aria-hidden="true">&#10003;</span>
+                            <h3>13. Content freshness and targeting</h3>
+                            <p>Check for outdated pricing, old promotions, or a copyright year still stuck a few years in the past, and confirm your key pages actually target the terms customers search for.</p>
+                        </div>
+                        <div class="card">
+                            <span class="check" aria-hidden="true">&#10003;</span>
+                            <h3>14. Analytics and tracking</h3>
+                            <p>Confirm Google Analytics 4 and Search Console are both installed and actually reporting data. Without them, every other item on this list becomes a guess instead of a measurement.</p>
+                        </div>
+                        <div class="card">
+                            <span class="check" aria-hidden="true">&#10003;</span>
+                            <h3>15. Basic accessibility</h3>
+                            <p>Check for readable color contrast, keyboard navigation, and descriptive link text. Accessibility has become an active enforcement environment, and it also simply widens who can use your site.</p>
+                        </div>
+                        <div class="card">
+                            <span class="check" aria-hidden="true">&#10003;</span>
+                            <h3>16. Forms that actually work</h3>
+                            <p>Submit every contact and quote form yourself and confirm the email actually arrives. A silently broken form can quietly cost leads for months before anyone notices.</p>
+                        </div>
+                    </div>
+                    <blockquote>
+                        <p><span class="tip">Pro tip:</span> A self-run audit using a checklist like this takes roughly an hour for a small site. Do it, write down exactly what you find, and hand that list to a developer — you'll get a far more accurate quote than describing the problem as "the site feels slow."</p>
+                    </blockquote>
+                </section>
+
+                <!-- Chapter 04 -->
+                <section class="chapter" id="red-flags">
+                    <div class="chapter-head">
+                        <span class="ghost-num" aria-hidden="true">04</span>
+                        <h2>Signs You Need a Developer Now</h2>
+                    </div>
+                    <div class="cards">
+                        <div class="flag">
+                            <span class="x" aria-hidden="true">&#10005;</span>
+                            <div>
+                                <h3>17. Your site isn't indexed in Google</h3>
+                                <p>Search "site:yourdomain.com" — if key pages don't show up, something structural is blocking indexing and needs expert attention immediately.</p>
+                            </div>
+                        </div>
+                        <div class="flag">
+                            <span class="x" aria-hidden="true">&#10005;</span>
+                            <div>
+                                <h3>18. Browser security warnings</h3>
+                                <p>A "not secure" or certificate error warning actively drives visitors away and signals a fundamental setup issue that shouldn't wait.</p>
+                            </div>
+                        </div>
+                        <div class="flag">
+                            <span class="x" aria-hidden="true">&#10005;</span>
+                            <div>
+                                <h3>19. The site genuinely fails on mobile</h3>
+                                <p>If navigation is unusable, text is unreadable, or buttons are unclickable on a phone, this isn't a minor polish item — it's turning away the majority of your traffic.</p>
+                            </div>
+                        </div>
+                        <div class="flag">
+                            <span class="x" aria-hidden="true">&#10005;</span>
+                            <div>
+                                <h3>20. No update or backup plan</h3>
+                                <p>Outdated CMS software and plugins are one of the most common ways small business sites get compromised. If you can't say when it was last backed up or updated, that's your answer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chapter 05 -->
+                <section class="chapter" id="bottom-line">
+                    <div class="chapter-head">
+                        <span class="ghost-num" aria-hidden="true">05</span>
+                        <h2>The Bottom Line</h2>
+                    </div>
+                    <div class="bottom-grid">
+                        <div>
+                            <p>A website audit isn't a single event — it's a structured way of finding out exactly what's broken before you pay someone else to find it for you. Work through this list, note what fails, and prioritize by impact: security and mobile usability first, technical SEO and Core Web Vitals next, content and polish last.</p>
+                            <p>The businesses that treat this as a quarterly habit, not a one-time fire drill, are the ones that catch small problems before they become lost leads. <strong>Choose accordingly.</strong></p>
+                        </div>
+                        <figure class="frame">
+                            <div class="clip">
+                                <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Developer reviewing website code and analytics on a laptop" loading="lazy" decoding="async">
+                            </div>
+                            <figcaption>A checklist first, a developer second</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- CTA -->
+    <section class="cta" id="cta">
+        <div class="container cta-inner">
+            <p class="overline">Next step</p>
+            <h2>Found more than you expected?</h2>
+            <p class="lead">We can help you turn your audit findings into a prioritized, accurately scoped fix — no guesswork, no wasted hours.</p>
+            <div class="cta-actions">
+                <a class="btn-primary" href="../pages/contact.html">Get Recommendations</a>
+                <a class="btn-outline" href="#what-to-look-for">Re-read the Checklist</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container-fluid px-5">
+        <div class="row g-2">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-widget">
+              <a class="navbar-brand" href="../denmaq.html">
+                <img
+                  src="../img/denmaq1.png"
+                  alt="Denmaq Logo"
+                  class="logo img-fluid"
+                />
+              </a>
+              <p class="footer-description">
+                Denmaq is a full-service digital marketing and IT agency helping
+                ambitious businesses rank higher, convert more visitors and
+                build technology that scales. Headquartered in Noida, serving
+                clients worldwide.
+              </p>
+              <div class="footer-social">
+                <a
+                  href="https://x.com/Denmaq"
+                  class="social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/company/coxfuture-technologies-pvt-ltd"
+                  class="social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/denmaq_?utm_source=qr&igsh=MTdicWhwa2huYmNsOQ=="
+                  class="social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/share/1JPFfs8ref/"
+                  class="social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-6">
+            <div class="footer-widget">
+              <h4>Company</h4>
+              <ul class="footer-links">
+                <li><a href="../pages/about.html">About Us</a></li>
+                <li><a href="../pages/career.html">Career</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-6">
+            <div class="footer-widget">
+              <h4>Services</h4>
+              <ul class="footer-links">
+                <li><a href="../services/seo-services.html">SEO Services</a></li>
+                <li>
+                  <a href="../services/web-development.html">Web Development</a>
+                </li>
+                <li>
+                  <a href="../services/mobile-app-development.html"
+                    >Mobile App Dev</a
+                  >
+                </li>
+                <li>
+                  <a href="../services/ppc-google-ads.html">PPC Advertising</a>
+                </li>
+                <li>
+                  <a href="../services/digital-marketing.html"
+                    >Digital Marketing</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-6">
+            <div class="footer-widget">
+              <h4>Locations</h4>
+              <ul class="footer-links">
+                <li>
+                  <div class="d-flex align-items-start gap-3">
+                    <i class="fa-solid fa-earth-americas"></i><span
+                      >India || USA || Canada || Singapore || Dubai </span
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex align-items-start gap-3">
+                    <i class="fas fa-map-marker-alt"></i
+                    ><span
+                      >Denmaq,LG-05, H-202,Dallas 1 Business<br />
+                      Park,Sector-63, Noida,UP - 201309</span
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-phone"></i
+                    ><a href="tel:+16464537977">+1 (646) 453-7977</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex align-items-center gap-3">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:sales@denmaq.org"> contact@denmaq.net </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <p class="copyright">&copy; 2026 Denmaq. All rights reserved.</p>
+            </div>
+            <div class="col-md-6">
+              <ul class="footer-bottom-links">
+                <li><a href="../pages/privacyPolicy.html">Privacy Policy</a></li>
+                <li><a href="../pages/terms.html">Terms of Service</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button class="scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="../js/denmaq.js"></script>
+</body>
+</html>

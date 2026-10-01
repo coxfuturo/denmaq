@@ -172,7 +172,7 @@ if ($formType === 'contact' || $formType === 'proposal') {
                     <div class='signature'>
                         Best Regards,<br>
                         <strong>The {$companyName} Team</strong><br>
-                        <span style='font-size:13px; color:#718096;'>Dallas 1 Business Park, Sector-63, Noida | +91 92177 90770</span>
+                        <span style='font-size:13px; color:#718096;'>Dallas 1 Business Park, Sector-63, Noida | +1 (646) 453-7977</span>
                     </div>
                 </div>
             </body>

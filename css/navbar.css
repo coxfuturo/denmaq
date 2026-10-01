@@ -130,16 +130,22 @@
 }
 
 .nav-link:hover,
-.nav-link.active,
 .nav-link:focus,
 .nav-link:active {
     color: var(--secondary-color);
 }
 
+.nav-link.active {
+    color: var(--secondary-color);
+}
+
 .nav-link:hover::after,
-.nav-link.active::after,
 .nav-link:focus::after,
 .nav-link:active::after {
+    width: 70%;
+}
+
+.nav-link.active::after {
     width: 70%;
 }
 
@@ -163,38 +169,41 @@
     }
 
     .home-page .navbar:not(.scrolled) .nav-link:hover,
-    .home-page .navbar:not(.scrolled) .nav-link.active,
     .home-page .navbar:not(.scrolled) .nav-link:focus,
     .home-page .navbar:not(.scrolled) .nav-link:active,
     .blog-page .navbar:not(.scrolled) .nav-link:hover,
-    .blog-page .navbar:not(.scrolled) .nav-link.active,
     .blog-page .navbar:not(.scrolled) .nav-link:focus,
     .blog-page .navbar:not(.scrolled) .nav-link:active,
     .dark-hero-page .navbar:not(.scrolled) .nav-link:hover,
-    .dark-hero-page .navbar:not(.scrolled) .nav-link.active,
     .dark-hero-page .navbar:not(.scrolled) .nav-link:focus,
     .dark-hero-page .navbar:not(.scrolled) .nav-link:active,
     body:has(.portfolio-hero) .navbar:not(.scrolled) .nav-link:hover,
-    body:has(.portfolio-hero) .navbar:not(.scrolled) .nav-link.active,
     body:has(.portfolio-hero) .navbar:not(.scrolled) .nav-link:focus,
     body:has(.portfolio-hero) .navbar:not(.scrolled) .nav-link:active,
     body:has(.about-hero) .navbar:not(.scrolled) .nav-link:hover,
-    body:has(.about-hero) .navbar:not(.scrolled) .nav-link.active,
     body:has(.about-hero) .navbar:not(.scrolled) .nav-link:focus,
     body:has(.about-hero) .navbar:not(.scrolled) .nav-link:active,
     body:has(.legal-hero) .navbar:not(.scrolled) .nav-link:hover,
-    body:has(.legal-hero) .navbar:not(.scrolled) .nav-link.active,
     body:has(.legal-hero) .navbar:not(.scrolled) .nav-link:focus,
     body:has(.legal-hero) .navbar:not(.scrolled) .nav-link:active,
     body:has(.team-hero) .navbar:not(.scrolled) .nav-link:hover,
-    body:has(.team-hero) .navbar:not(.scrolled) .nav-link.active,
     body:has(.team-hero) .navbar:not(.scrolled) .nav-link:focus,
     body:has(.team-hero) .navbar:not(.scrolled) .nav-link:active,
     body:has(.career-hero) .navbar:not(.scrolled) .nav-link:hover,
-    body:has(.career-hero) .navbar:not(.scrolled) .nav-link.active,
     body:has(.career-hero) .navbar:not(.scrolled) .nav-link:focus,
     body:has(.career-hero) .navbar:not(.scrolled) .nav-link:active {
         color: var(--secondary-color, #411E79) !important;
+    }
+
+    .home-page .navbar:not(.scrolled) .nav-link.active,
+    .blog-page .navbar:not(.scrolled) .nav-link.active,
+    .dark-hero-page .navbar:not(.scrolled) .nav-link.active,
+    body:has(.portfolio-hero) .navbar:not(.scrolled) .nav-link.active,
+    body:has(.about-hero) .navbar:not(.scrolled) .nav-link.active,
+    body:has(.legal-hero) .navbar:not(.scrolled) .nav-link.active,
+    body:has(.team-hero) .navbar:not(.scrolled) .nav-link.active,
+    body:has(.career-hero) .navbar:not(.scrolled) .nav-link.active {
+        color: var(--secondary-color) !important;
     }
 
     .home-page .navbar:not(.scrolled) .navbar-brand,
@@ -240,7 +249,9 @@
     body:has(.career-hero) .navbar:not(.scrolled) .logo {
         filter: brightness(0) invert(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
     }
+
 }
+
 
 /* Mobile Navbar Dropdown Override for Transparent Navbars */
 @media (max-width: 991.98px) {
